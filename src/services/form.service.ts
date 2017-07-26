@@ -12,9 +12,9 @@ export class FormService {
       type: templateType,
     }
 
-    const validators = {
-      validation: Validators.compose([Validators.required]),
-    }
+    // const validators = {
+    //   validation: Validators.compose([Validators.required]),
+    // }
 
     const toKeys = [
       'disabled',
@@ -33,7 +33,7 @@ export class FormService {
       key,
       type,
       templateOptions,
-      validators,
+      // validators,
     }
   }
 
