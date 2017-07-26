@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ShareButton, ShareProvider} from 'ng2-sharebuttons';
+import {ShareButton, ShareProvider} from '../../../../src';
 
 @Component({
   selector: 'single',

@@ -4,7 +4,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {MdButtonModule} from '@angular/material';
 import {SharedModule} from './shared/shared.module';
-import {ShareButtonsModule} from 'ng2-sharebuttons';
+import {ShareButtonsModule} from '../../../src';
 
 // import {ShareButtonsModule} from './sharebuttons';
 

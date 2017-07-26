@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
-import {ShareButtonsService} from 'ng2-sharebuttons';
+import {ShareButtonsService} from '../../../src';
 
 // import {ShareButtonsService} from './sharebuttons';
 
@@ -11,7 +11,7 @@ import {ShareButtonsService} from 'ng2-sharebuttons';
 })
 export class AppComponent {
 
-  constructor(private shareService: ShareButtonsService){
+  constructor(private shareService: ShareButtonsService) {
     shareService.twitterAccount = 'MurhafSousli';
   }
 
