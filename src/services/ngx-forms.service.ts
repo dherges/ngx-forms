@@ -4,7 +4,7 @@ import { Validators } from '@angular/forms'
 declare const global: any; // To make AoT compiler (ngc) happy
 
 @Injectable()
-export class FormService {
+export class NgxFormsService {
 
   field(type, templateType, key, options: any = {}) {
 

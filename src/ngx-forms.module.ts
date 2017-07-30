@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { FormService } from './services/form.service';
+import { NgxFormsService } from './services/ngx-forms.service';
 
 @NgModule({
   declarations: [
@@ -19,12 +19,12 @@ export class NgxFormsModule {
     return {
       ngModule: NgxFormsModule,
       providers: [
-        FormService,
+        NgxFormsService,
       ]
     };
   }
 }
 
 export {
-FormService,
+NgxFormsService,
 }

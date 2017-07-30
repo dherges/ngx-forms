@@ -1,7 +1,7 @@
-import { FormService } from './services/form.service';
+import { NgxFormsService } from './services/ngx-forms.service';
 import { NgxFormsModule } from './ngx-forms.module';
 
 export {
 NgxFormsModule,
-FormService,
+NgxFormsService,
 }
