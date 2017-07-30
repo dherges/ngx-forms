@@ -4,9 +4,9 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {MdButtonModule} from '@angular/material';
 import {SharedModule} from './shared/shared.module';
-import {ShareButtonsModule} from '../../../src';
+import {NgxFormsModule} from '../../../src';
 
-// import {ShareButtonsModule} from './sharebuttons';
+// import {NgxFormsModule} from './sharebuttons';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
@@ -33,7 +33,7 @@ import { SingleComponent } from './single/single.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ShareButtonsModule.forRoot(),
+    NgxFormsModule.forRoot(),
     HttpModule,
     SharedModule,
     MdButtonModule

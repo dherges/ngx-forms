@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ShareButton, ShareProvider} from '../../../../src';
 
 @Component({
   selector: 'single',
@@ -49,11 +48,7 @@ share-button button {
   }
 
   ngOnInit() {
-    this.fbButton = new ShareButton(
-      ShareProvider.FACEBOOK,
-      '<i class="fa fa-facebook"></i>',
-      'facebook'
-    );
+
   }
 
 }

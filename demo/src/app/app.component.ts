@@ -1,7 +1,7 @@
 import {Component, ChangeDetectionStrategy} from '@angular/core';
-import {ShareButtonsService} from '../../../src';
+import {NgxFormsService} from '../../../src';
 
-// import {ShareButtonsService} from './sharebuttons';
+// import {NgxFormsService} from './sharebuttons';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,7 @@ import {ShareButtonsService} from '../../../src';
 })
 export class AppComponent {
 
-  constructor(private shareService: ShareButtonsService) {
-    shareService.twitterAccount = 'MurhafSousli';
+  constructor(private forms: NgxFormsService) {
   }
 
 }
