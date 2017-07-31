@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { CommonModule } from '@angular/common'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
-import { FormlyModule, FormlyBootstrapModule } from 'ng-formly'
-
+import { NgxFormlyModule } from './modules/formly/formly.module'
 import { NgxFormComponent } from './components/form/ngx-form.component'
 import { NgxFormsService } from './services/ngx-forms.service'
 
@@ -14,8 +13,7 @@ import { NgxFormsService } from './services/ngx-forms.service'
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot(),
-    FormlyBootstrapModule,
+    NgxFormlyModule,
   ],
   declarations: [
     NgxFormComponent,
