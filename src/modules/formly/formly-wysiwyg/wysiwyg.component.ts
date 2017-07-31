@@ -4,11 +4,11 @@ import { FieldType } from 'ng-formly'
 @Component({
   selector: 'ngx-formly-field-wysiwyg',
   template: `
-    <quill-editor
-      [formlyAttributes]="field"
-      [(ngModel)]="model[key]"
-      [theme]="theme"
-      [modules]="toolbar"></quill-editor>
+    <quill-editor [formlyAttributes]="field"
+                  [(ngModel)]="model[key]"
+                  [theme]="theme"
+                  [modules]="toolbar">
+    </quill-editor>
   `,
 })
 export class FormlyFieldWysiwygComponent extends FieldType implements OnInit {

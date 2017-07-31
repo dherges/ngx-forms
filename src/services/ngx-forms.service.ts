@@ -12,6 +12,8 @@ export class NgxFormsService {
       type: templateType,
     }
 
+    const className = options.className || 'col-12'
+
     // const validators = {
     //   validation: Validators.compose([Validators.required]),
     // }
@@ -33,6 +35,7 @@ export class NgxFormsService {
       key,
       type,
       templateOptions,
+      className,
       // validators,
     }
   }
