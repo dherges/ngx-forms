@@ -18,8 +18,10 @@ export class MyComponent {
   formConfig = {
     title: 'ngx-forms Example Form',
     icon: 'fa fa-magic',
-    showCancel: true,
-    hasHeader: true,
+        buttons: [
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
+      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' }},
+    ],
     fields: [
       this.forms.input('inputField', {
         label: 'Input',
@@ -56,6 +58,9 @@ export class MyComponent {
         ]
       }),
     ]
+  }
+  handleAction($event) {
+    console.log('$event', $event)
   }
 }`
 
@@ -71,8 +76,10 @@ export class MyComponent {
   formConfig = {
     title: 'ngx-forms Example Form',
     icon: 'fa fa-magic',
-    showCancel: true,
-    hasHeader: true,
+    buttons: [
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
+      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' }},
+    ],
     fields: [
       this.forms.input('inputField', {
         label: 'Input',
@@ -108,10 +115,13 @@ export class MyComponent {
           { label: 5, value: 5 },
         ]
       }),
-
     ]
   }
 
   constructor(private forms: NgxFormsService) { }
+
+  handleAction($event) {
+    console.log('$event', $event)
+  }
 
 }

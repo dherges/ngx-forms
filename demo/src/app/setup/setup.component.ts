@@ -24,8 +24,10 @@ export class SetupComponent {
 
   formConfig = {
     fields: this.getFormFields(),
-    showCancel: true,
-    hasHeader: false,
+    buttons: [
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
+      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' }},
+    ]
   }
 
   constructor(
