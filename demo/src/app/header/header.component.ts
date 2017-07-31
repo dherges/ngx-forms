@@ -7,6 +7,6 @@ import {Component, ChangeDetectionStrategy} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-  logo = 'assets/img/logo.svg';
-  description = 'Simple, lightweight, customizable share buttons with counts';
+  logo = 'assets/img/ngx-plus-light.svg';
+  description = 'Advanced Angular Form Development';
 }

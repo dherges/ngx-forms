@@ -6,6 +6,6 @@ import {Component, ChangeDetectionStrategy} from '@angular/core';
   styleUrls: ['./installation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InstallationComponent{
-  installCode = '$ npm install ngx-sharebuttons --save';
+export class InstallationComponent {
+  installCode = '$ npm install @ngx-plus/ngx-forms --save';
 }

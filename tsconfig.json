@@ -19,6 +19,11 @@
       "node_modules/@types"
     ]
   },
+  "paths": {
+    "@angular/*": [
+      "../node_modules/@angular/*"
+    ]
+  },
   "files": [
     "./src/index.ts"
   ],
