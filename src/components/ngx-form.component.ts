@@ -23,7 +23,7 @@ export class NgxFormComponent {
     fields: [],
     buttons: [],
   }
-  @Input() item
+  @Input() item = {}
   @Output() action = new EventEmitter()
 
   handleAction($event) {

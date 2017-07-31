@@ -16,6 +16,7 @@ import { IntegrationComponent } from './integration/integration.component'
 import { FooterComponent } from './footer/footer.component'
 import { NotesComponent } from './notes/notes.component'
 import { SingleComponent } from './single/single.component'
+import { FieldsComponent } from './fields/fields.component'
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { SingleComponent } from './single/single.component'
     SetupComponent,
     UsageComponent,
     CustomComponent,
+    FieldsComponent,
     IntegrationComponent,
     FooterComponent,
     NotesComponent,
