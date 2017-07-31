@@ -1,44 +1,29 @@
 <section>
   <h2>Usage</h2>
-
-  <p>Import <b>NgxFormsModule</b> in the root module</p>
+  <ul>
+    <li>Import <b>NgxFormsService</b> in your component or service</li>
+    <li>Configure your form</li>
+    <li>Handle the form actions</li>
+  </ul>
 
   <tabs>
     <tab tabTitle="Code">
       <highlight [lang]="'ts'"
-                 [code]="importCode">
+                 [code]="tsCode">
       </highlight>
     </tab>
     <tab tabTitle="Template">
       <highlight [lang]="'html'"
-                 [code]="basicCode">
+                 [code]="templateCode">
       </highlight>
     </tab>
   </tabs>
 
   <output>
-  </output>
-
-  <tabs>
-    <tab tabTitle="Code">
-      <highlight [lang]="'ts'"
-                 [code]="countCode">
-      </highlight>
-    </tab>
-    <tab tabTitle="Template">
-      <highlight [lang]="'html'"
-                 [code]="countTemplate">
-      </highlight>
-    </tab>
-    <tab tabTitle="Style">
-      <highlight [lang]="'scss'"
-                 [code]="countStyle">
-      </highlight>
-    </tab>
-  </tabs>
-
-  <output>
-
+    <ngx-form [config]="formConfig"
+              [item]="item"
+              (action)="handleAction($event)">
+    </ngx-form>
   </output>
 
 </section>
