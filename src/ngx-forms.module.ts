@@ -1,17 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { CommonModule } from '@angular/common'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
-import { NgxFormsService } from './services/ngx-forms.service';
+import { FormlyModule, FormlyBootstrapModule } from 'ng-formly'
+
+import { NgxFormComponent } from './components/form/ngx-form.component'
+import { NgxFormsService } from './services/ngx-forms.service'
 
 @NgModule({
-  declarations: [
-
-  ],
   imports: [
+    BrowserModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyBootstrapModule,
+  ],
+  declarations: [
+    NgxFormComponent,
   ],
   exports: [
-
+    NgxFormComponent,
   ]
 })
 export class NgxFormsModule {
@@ -21,7 +31,7 @@ export class NgxFormsModule {
       providers: [
         NgxFormsService,
       ]
-    };
+    }
   }
 }
 
