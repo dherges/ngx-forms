@@ -11,7 +11,6 @@ import {NgxFormsService} from '../../../src';
 })
 export class AppComponent {
 
-  constructor(private forms: NgxFormsService) {
-  }
+  constructor(private forms: NgxFormsService) { }
 
 }
