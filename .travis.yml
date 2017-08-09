@@ -1,3 +1,6 @@
+notifications:
+  email: false
+
 sudo: required
 dist: trusty
 
@@ -16,9 +19,26 @@ node_js:
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm install --quiet -g gulp-cli
+  - npm install --quiet -g gulp-cli @angular/cli
   - npm install
+  - cd demo && npm install && cd -
 
-script: gulp test:ci
+script:
+  - gulp test:ci
+  - gulp link
+  - gulp link:demo
+  - npm run build:demo:ci
 
 after_success: gulp coveralls
+
+#deploy:
+#  - provider: script
+#    skip_cleanup: true
+#    script: bin/deploy-gh-pages.sh
+#    on:
+#      branch: master
+#      all_branches: true
+
+cache:
+  directories:
+    - node_modules
