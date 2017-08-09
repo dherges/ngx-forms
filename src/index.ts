@@ -5,3 +5,5 @@ export {
 NgxFormsModule,
 NgxFormsService,
 }
+
+export * from './components'

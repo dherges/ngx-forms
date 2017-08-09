@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core'
-import { NgxFormsService } from '../../../../src/services/ngx-forms.service'
+import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'fields',

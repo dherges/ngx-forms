@@ -1,7 +1,5 @@
-import {Component, ChangeDetectionStrategy} from '@angular/core';
-import {NgxFormsService} from '../../../src';
-
-// import {NgxFormsService} from './sharebuttons';
+import {Component, ChangeDetectionStrategy} from '@angular/core'
+import {NgxFormsService} from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'app-root',

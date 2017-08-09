@@ -23,6 +23,8 @@ import { FormGroup } from '@angular/forms'
 export class NgxFormComponent {
   @Input() form: FormGroup = new FormGroup({})
   @Input() config = {
+    icon: '',
+    title: '',
     fields: [],
     buttons: [],
   }

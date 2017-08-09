@@ -297,7 +297,7 @@ gulp.task('demo', (done) => {
 // and, thanks to 'npm link ngx-forms' on demo project, be sure to always use the latest built
 // version of the library ( which is in 'dist/' folder)
 gulp.task('link', (done) => {
-    exec('npm link', { cwd: `${config.outputDir}` }, execCallback(done)); // run 'npm link' from 'dist' folder
+    exec('npm link @ngx-plus/ngx-forms', { cwd: `${config.outputDir}` }, execCallback(done)); // run 'npm link' from 'dist' folder
 });
 
 // Upload code coverage report to coveralls.io (will be triggered by Travis CI on successful build)

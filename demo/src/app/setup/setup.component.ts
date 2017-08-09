@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core'
-import { NgxFormsService } from '../../../../src'
+import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'setup',
   templateUrl: './setup.component.html',
   styleUrls: ['./setup.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SetupComponent {
 
@@ -25,8 +25,8 @@ export class SetupComponent {
   formConfig = {
     fields: this.getFormFields(),
     buttons: [
-      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
-      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' }},
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' } },
+      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },
     ]
   }
 

@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
 import { MdButtonModule } from '@angular/material'
+import { NgxFormsModule, NgxFormsService } from '@ngx-plus/ngx-forms'
+
 import { SharedModule } from './shared/shared.module'
-import { NgxFormsModule, NgxFormsService } from '../../../src'
 
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './header/header.component'

@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core'
-import { NgxFormsService } from '../../../../src'
+import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'usage',
@@ -77,8 +77,8 @@ export class MyComponent {
     title: 'ngx-forms Example Form',
     icon: 'fa fa-magic',
     buttons: [
-      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
-      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' }},
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' } },
+      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },
     ],
     fields: [
       this.forms.input('inputField', {
