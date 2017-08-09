@@ -126,4 +126,20 @@ describe('Service: Form, Angular Tests', () => {
       const field = service.select('selectKey', { placeholder: 'Select', label: 'Select' })
       expect(field).toEqual(expected)
     }))
+
+  it('use field() directly to create a field...',
+    inject([NgxFormsService], (service: NgxFormsService) => {
+      const expected = {
+        key: 'selectKey',
+        type: 'select',
+        templateOptions: {
+          type: 'text',
+          label: 'Select',
+          placeholder: 'Select',
+        },
+        className: ''
+      }
+      const field = service.field('select', 'text', 'selectKey', { placeholder: 'Select', label: 'Select' })
+      expect(field).toEqual(expected)
+    }))
 })
