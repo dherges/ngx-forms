@@ -1,19 +1,22 @@
 <section>
   <h2>FormService Fields</h2>
   <div *ngFor="let field of fields">
-    <h3>Field: {{field.name}}</h3>
+    <h3>{{field.name}}</h3>
     <tabs>
-      <tab tabTitle="Code" *ngIf="field.code.code">
+      <tab tabTitle="Code"
+           *ngIf="field.code.code">
         <highlight [lang]="'ts'"
                    [code]="field.code.code">
         </highlight>
       </tab>
-      <tab tabTitle="Template" *ngIf="field.code.template">
+      <tab tabTitle="Template"
+           *ngIf="field.code.template">
         <highlight [lang]="'html'"
                    [code]="field.code.template">
         </highlight>
       </tab>
-      <tab tabTitle="Style" *ngIf="field.code.style">
+      <tab tabTitle="Style"
+           *ngIf="field.code.style">
         <highlight [lang]="'scss'"
                    [code]="field.code.style">
         </highlight>
