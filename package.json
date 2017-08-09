@@ -21,7 +21,11 @@
     "colmena",
     "ngx-forms"
   ],
-  "author": "Brannon N. Darby II <brannon@ngx.plus> / Bram Borggreve <bram@ngx.plus>",
+  "contributors": [
+    "Brannon N. Darby II <brannon@ngx.plus> (https://github.com/brannon-darby)",
+    "Bram Borggreve <borggreve@gmail.com> (https://github.com/beeman)"
+  ],
+  "author": " / ",
   "license": "MIT",
   "main": "./dist",
   "typings": "./dist",
