@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+import {Component, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core'
 import { NgxFormsService } from '../../../../src/services/ngx-forms.service'
 
 @Component({
@@ -11,6 +11,8 @@ import { NgxFormsService } from '../../../../src/services/ngx-forms.service'
 export class FieldsComponent {
 
   constructor(private forms: NgxFormsService) { }
+
+  // TODO: figure out why code snippets don't display on page load
 
   item = {}
 
