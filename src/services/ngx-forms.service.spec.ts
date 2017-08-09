@@ -24,7 +24,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'text',
           label: 'Input',
           placeholder: 'Input',
-        }
+        },
+        className: ''
       }
       const field = service.input('inputKey', { placeholder: 'Input', label: 'Input' })
       expect(field).toEqual(expected)
@@ -39,7 +40,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'email',
           label: 'Email',
           placeholder: 'Email',
-        }
+        },
+        className: ''
       }
       const field = service.email('emailKey', { placeholder: 'Email', label: 'Email' })
       expect(field).toEqual(expected)
@@ -54,7 +56,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'password',
           label: 'Password',
           placeholder: 'Password',
-        }
+        },
+        className: ''
       }
       const field = service.password('passwordKey', { placeholder: 'Password', label: 'Password' })
       expect(field).toEqual(expected)
@@ -69,7 +72,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'date',
           label: 'Date',
           placeholder: 'Date',
-        }
+        },
+        className: ''
       }
       const field = service.date('dateKey', { placeholder: 'Date', label: 'Date' })
       expect(field).toEqual(expected)
@@ -84,7 +88,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'text',
           label: 'Text Area',
           placeholder: 'Text Area',
-        }
+        },
+        className: ''
       }
       const field = service.textarea('textareaKey', { placeholder: 'Text Area', label: 'Text Area' })
       expect(field).toEqual(expected)
@@ -99,7 +104,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'text',
           label: 'Wysiwyg',
           placeholder: 'Wysiwyg',
-        }
+        },
+        className: ''
       }
       const field = service.wysiwyg('wysiwygKey', { placeholder: 'Wysiwyg', label: 'Wysiwyg' })
       expect(field).toEqual(expected)
@@ -114,7 +120,8 @@ describe('Service: Form, Angular Tests', () => {
           type: 'text',
           label: 'Select',
           placeholder: 'Select',
-        }
+        },
+        className: ''
       }
       const field = service.select('selectKey', { placeholder: 'Select', label: 'Select' })
       expect(field).toEqual(expected)

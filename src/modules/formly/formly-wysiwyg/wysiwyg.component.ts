@@ -1,3 +1,4 @@
+/* tslint:disable:no-access-missing-member */
 import { Component, OnInit } from '@angular/core'
 import { FieldType } from 'ng-formly'
 

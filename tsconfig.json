@@ -25,6 +25,9 @@
     ],
     "ng-formly/*": [
       "./node_modules/ng-formly/*"
+    ],
+    "rxjs/*": [
+      "./node_modules/rxjs/*"
     ]
   },
   "files": [
