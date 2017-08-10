@@ -4,9 +4,9 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 @Component({
   selector: 'app-root',
   template: `
-    <demo-nav [items]="items"></demo-nav>
+    <ui-nav [items]="items"></ui-nav>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <ui-footer></ui-footer>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })

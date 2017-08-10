@@ -10,29 +10,22 @@
   <div class="row">
     <div class="col-md-8">
 
-      <div class="mb-3"></div>
-      <tabs>
-        <tab tabTitle="Template">
-          <highlight [lang]="'html'"
-                     [code]="templateCode">
-          </highlight>
-        </tab>
-      </tabs>
-      <div class="mb-3"></div>
-      <tabs>
-        <tab tabTitle="Code">
-          <highlight [lang]="'ts'"
-                     [code]="tsCode">
-          </highlight>
-        </tab>
-      </tabs>
+      <ui-card icon="fa fa-code" title="Code">
+        <highlight lang="ts" [code]="tsCode"></highlight>
+      </ui-card>
+
+      <ui-card icon="fa fa-html5" title="Template">
+        <highlight lang="html" [code]="templateCode"></highlight>
+      </ui-card>
+
     </div>
     <div class="col-md-4">
 
-      <ngx-form [config]="formConfig"
-                [item]="item"
-                (action)="handleAction($event)">
-      </ngx-form>
+      <ui-card icon="fa fa-chevron-right" title="Output">
+        <div class="ui-card-block">
+          <ngx-form-fields [fields]="formConfig.fields"></ngx-form-fields>
+        </div>
+      </ui-card>
 
     </div>
   </div>

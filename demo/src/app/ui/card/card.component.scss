@@ -1,0 +1,25 @@
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '../../../assets/style/variables';
+
+.ui-card {
+  margin-bottom: 20px;
+}
+
+.ui-card-header {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  background-color: rgba(226,226,226,0.8);
+}
+
+.ui-card-title {
+  padding: .2rem 1rem;
+  transition: all linear .2s;
+  color: $font-color;
+  color: $action-color;
+}
+
+.ui-card-padding {
+
+}

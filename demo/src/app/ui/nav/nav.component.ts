@@ -1,36 +1,25 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
 
 @Component({
-  selector: 'demo-nav',
+  selector: 'ui-nav',
   template: `
     <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col">
-            <button class="navbar-toggler navbar-toggler-right"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse"
-                 id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li *ngFor="let item of items"
-                    class="nav-item"
-                    [routerLink]="item.link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    routerLinkActive="active">
-                  <a class="nav-link">{{ item.name }}</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item"
+                  *ngFor="let item of items"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  routerLinkActive="active">
+                <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+              </li>
+            </ul>
           </div>
-          <div class="col text-center">
+          <div class="col-md text-center">
             <a class="navbar-brand" href="#">@ngx-plus/ngx-forms</a>
           </div>
           <div class="col">
-            <theme></theme>
             <ribbon></ribbon>
           </div>
         </div>

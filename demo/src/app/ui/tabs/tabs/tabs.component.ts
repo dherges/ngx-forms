@@ -11,7 +11,7 @@ import {TabComponent} from "../tab/tab.component";
     </ul>
     <ng-content></ng-content>
   `,
-  styleUrls: ['tabs.component.scss'],
+  styleUrls: ['./tabs.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsComponent implements AfterContentInit {
