@@ -19,6 +19,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
                 <li *ngFor="let item of items"
                     class="nav-item"
                     [routerLink]="item.link"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     routerLinkActive="active">
                   <a class="nav-link">{{ item.name }}</a>
                 </li>

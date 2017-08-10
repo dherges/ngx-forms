@@ -1,59 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Play:400,700');
-@import url('https://bootswatch.com/4-alpha/cosmo/bootstrap.min.css');
-
+@import url( 'https://fonts.googleapis.com/css?family=Play:400,700');
+@import url( 'https://bootswatch.com/4-alpha/cosmo/bootstrap.min.css');
 @import '~animate.css';
 @import '~prismjs/themes/prism';
 @import '~font-awesome/css/font-awesome.min.css';
 @import './assets/style/variables';
 @import '~bootstrap/scss/bootstrap';
-
 @import '../../src/scss/styles';
 
 body {
-  color: $font-color;
-  height: 100vh;
+  color     : $font-color;
+  height    : 100vh;
   overflow-x: hidden;
-  padding: 80px;
-  width: 100vw;
+  padding   : 80px;
+  width     : 100vw;
 }
 
-h1, h2, .navbar-brand {
-  color: $brand-primary !important;
+.navbar-brand,
+h1,
+h2 {
+  color      : $brand-primary !important;
   font-family: 'Play', sans-serif;
 }
 
-.navbar {
-  height: 80px;
-  padding: 0 20px;
-
-  .row {
-    width: 100vw;
-  }
-
-  .navbar-brand {
-    margin-right: -30px;
-    padding-top: 0;
-  }
-
-  .navbar-nav {
-    justify-content: center !important;
-  }
-
+code[highlight] {
+  font-size: 0.8em;
 }
 
-
-
-code[highlight]{
-  font-size: .8em;
+code[highlight],
+highlight {
+  border-radius   : 0.2em;
+  background-color: #F5F2F0;
 }
 
-highlight, code[highlight]{
-  border-radius: .2em;
-  background-color:#F5F2F0;
-}
-
-tabs highlight{
+tabs highlight {
   border-radius: 0;
 }
 
@@ -63,29 +43,31 @@ img {
 
 a {
   text-decoration: none;
-  color: $action-color;
+  color          : $action-color;
 }
 
 section {
-  display: block;
+  display   : block;
   // width: 100%;
   margin-top: 30px;
+
   h2 {
     &:before {
-      color: $action-color;
-      content: '\f0da';
-      font-family: "FontAwesome";
-      float: left;
+      color       : $action-color;
+      content     : '\f0da';
+      font-family : "FontAwesome";
+      float       : left;
       margin-right: 10px;
     }
+
     &:after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 100%;
-      opacity: 0.1;
+      content         : '';
+      display         : block;
+      height          : 1px;
+      width           : 100%;
+      opacity         : 0.1;
       background-color: black;
-      margin-top: 15px;
+      margin-top      : 15px;
     }
   }
 }

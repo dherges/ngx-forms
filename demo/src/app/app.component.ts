@@ -6,14 +6,14 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
   template: `
     <demo-nav [items]="items"></demo-nav>
     <router-outlet></router-outlet>
-    <footer></footer>
+    <app-footer></app-footer>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
 
   items = [
-    { name: 'Demo', link: ['/'] },
+    { name: 'Demo', link: ['/demo'] },
     { name: 'Installation', link: ['/', 'installation'] },
     { name: 'Usage', link: ['/', 'usage'] },
     { name: 'Fields', link: ['/', 'fields'] },
