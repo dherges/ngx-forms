@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Play:400,700');
-@import '~normalize.css';
-@import '~animate.css';
+//@import url('https://fonts.googleapis.com/css?family=Play:400,700');
+@import url('https://bootswatch.com/4-alpha/cosmo/bootstrap.min.css');
+
+//<link rel="stylesheet" type="text/css" href="">
+//@import '~normalize.css';
+//@import '~animate.css';
 @import '~font-awesome/css/font-awesome.min.css';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import 'assets/style/variables';
 @import '~prismjs/themes/prism';
 

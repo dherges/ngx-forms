@@ -6,24 +6,36 @@
     <li>Handle the form actions</li>
   </ul>
 
-  <tabs>
-    <tab tabTitle="Code">
-      <highlight [lang]="'ts'"
-                 [code]="tsCode">
-      </highlight>
-    </tab>
-    <tab tabTitle="Template">
-      <highlight [lang]="'html'"
-                 [code]="templateCode">
-      </highlight>
-    </tab>
-  </tabs>
 
-  <output>
-    <ngx-form [config]="formConfig"
-              [item]="item"
-              (action)="handleAction($event)">
-    </ngx-form>
-  </output>
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="mb-3"></div>
+      <tabs>
+        <tab tabTitle="Template">
+          <highlight [lang]="'html'"
+                     [code]="templateCode">
+          </highlight>
+        </tab>
+      </tabs>
+      <div class="mb-3"></div>
+      <tabs>
+        <tab tabTitle="Code">
+          <highlight [lang]="'ts'"
+                     [code]="tsCode">
+          </highlight>
+        </tab>
+      </tabs>
+    </div>
+    <div class="col-md-4">
+
+      <ngx-form [config]="formConfig"
+                [item]="item"
+                (action)="handleAction($event)">
+      </ngx-form>
+
+    </div>
+  </div>
+
 
 </section>

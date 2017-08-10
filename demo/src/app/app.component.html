@@ -1,12 +1,13 @@
-<div class="container">
-  <header></header>
-  <installation></installation>
-  <setup></setup>
-  <usage></usage>
-  <custom></custom>
-  <fields></fields>
-  <single></single>
-  <integration></integration>
-  <notes></notes>
-  <footer></footer>
+<div class="p-5">
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <a class="navbar-brand" href="#">@ngx-plus/ngx-forms</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item" *ngFor="let item of items">
+        <a class="nav-link" [routerLink]="item.link">{{item.name}}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
