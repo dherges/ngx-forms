@@ -3,10 +3,18 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
 @Component({
   selector: 'ui-nav',
   template: `
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col align-self-start">
+        <div class="row align-items-center justify-content-between">
+          <div class="col text-left">
+            <a class="navbar-brand" href="#">
+              <div class="animated fadeIn">
+                <img class="ngx-plus-logo"
+                     [src]="logo" />&nbsp; @ngx-plus/ngx-forms
+              </div>
+            </a>
+          </div>
+          <div class="col">
             <ul class="navbar-nav">
               <li class="nav-item"
                   *ngFor="let item of items"
@@ -16,10 +24,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
               </li>
             </ul>
           </div>
-          <div class="col-md text-center">
-            <a class="navbar-brand" href="#">@ngx-plus/ngx-forms</a>
-          </div>
-          <div class="col">
+          <div class="col-2 align-self-center">
             <div class="github-buttons hidden-md-down">
               <iframe allowtransparency="true"
                       scrolling="no"
@@ -40,6 +45,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
 export class NavComponent {
 
   public themeDropOpen = false
+  public logo = 'assets/img/ngx-plus-light.svg'
 
   @Input() items: any[]
   @Input() themes: any[]

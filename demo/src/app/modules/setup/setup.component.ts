@@ -9,6 +9,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core'
 export class SetupComponent {
 
   importCode = `import { NgxFormsModule } from '@ngx-plus/ngx-forms'
+
 @NgModule({
   imports: [
     NgxFormsModule.forRoot()

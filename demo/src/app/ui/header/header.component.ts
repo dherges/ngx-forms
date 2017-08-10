@@ -7,7 +7,6 @@ import {Component, ChangeDetectionStrategy} from '@angular/core'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-  logo = 'assets/img/ngx-plus-light.svg'
   title = 'ngx-forms'
   description = 'Advanced Angular Form Development'
 }

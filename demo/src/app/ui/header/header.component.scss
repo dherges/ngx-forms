@@ -9,29 +9,26 @@
 }
 
 h1 {
-  color : $output-color !important;
+  color : $brand-primary !important;
   font-size    : 3em;
   margin-bottom: 0;
+  margin-top: 20px;
   @media only screen and (max-device-width : 480px) {
     font-size: 2em;
   }
 }
 
-h2 {
-  margin: 1em 0;
-  @media only screen and (max-device-width : 480px) {
-    font-size: 1em;
+h3 {
+  color: $brand-info;
+  &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      opacity: 0.1;
+      background-color: black;
+      margin-top: 15px;
   }
-}
-
-h3:after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    opacity: 0.1;
-    background-color: black;
-    margin-top: 15px;
 }
 
 img {
