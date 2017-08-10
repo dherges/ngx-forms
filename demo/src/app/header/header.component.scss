@@ -24,6 +24,16 @@ h2 {
   }
 }
 
+h3:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    opacity: 0.1;
+    background-color: black;
+    margin-top: 15px;
+}
+
 img {
   width: 300px;
 }

@@ -17,8 +17,10 @@ import { FooterComponent } from './footer/footer.component'
 import { NotesComponent } from './notes/notes.component'
 
 import { FieldsComponent } from './fields/fields.component'
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'
 import { DemoComponent } from './demo/demo.component'
+import { NavComponent } from './nav/nav.component'
+import { ThemeComponent } from './nav/theme/theme.component'
 
 @NgModule({
   imports: [
@@ -41,6 +43,8 @@ import { DemoComponent } from './demo/demo.component'
     FooterComponent,
     NotesComponent,
     DemoComponent,
+    NavComponent,
+    ThemeComponent,
   ],
   bootstrap: [AppComponent]
 })

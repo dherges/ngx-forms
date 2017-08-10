@@ -25,6 +25,8 @@
     "@angular/router": "^4.3.3",
     "@ngx-plus/ngx-forms": "latest",
     "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0-alpha.6",
+    "bootswatch": "^3.3.7",
     "bourbon": "^4.3.4",
     "core-js": "^2.5.0",
     "font-awesome": "^4.7.0",

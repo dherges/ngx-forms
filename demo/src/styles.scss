@@ -1,35 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
-//@import url('https://fonts.googleapis.com/css?family=Play:400,700');
+@import url('https://fonts.googleapis.com/css?family=Play:400,700');
 @import url('https://bootswatch.com/4-alpha/cosmo/bootstrap.min.css');
 
-//<link rel="stylesheet" type="text/css" href="">
-//@import '~normalize.css';
-//@import '~animate.css';
-@import '~font-awesome/css/font-awesome.min.css';
-//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import 'assets/style/variables';
+@import '~animate.css';
 @import '~prismjs/themes/prism';
+@import '~font-awesome/css/font-awesome.min.css';
+@import './assets/style/variables';
+@import '~bootstrap/scss/bootstrap';
 
 @import '../../src/scss/styles';
 
-//@import 'assets/style/prism-atom-dark.css';
-//@import 'assets/style/prism-base16-light.css';
-//@import 'assets/style/prism-xonokai.css';
-//@import 'assets/style/prism-duotone-sea.css';
-//@import 'assets/style/prism-duotone-space.css';
-
 body {
-  font-family: sans-serif;
   color: $font-color;
-  line-height: 2em;
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 80px;
+  width: 100vw;
 }
 
-h1, h2, h3, h4, h5, b, li, button {
+h1, h2, .navbar-brand {
+  color: $brand-primary !important;
   font-family: 'Play', sans-serif;
 }
+
+.navbar {
+  height: 80px;
+  padding: 0 20px;
+
+  .row {
+    width: 100vw;
+  }
+
+  .navbar-brand {
+    margin-right: -30px;
+    padding-top: 0;
+  }
+
+  .navbar-nav {
+    justify-content: center !important;
+  }
+
+}
+
+
+
 code[highlight]{
   font-size: .8em;
 }
+
 highlight, code[highlight]{
   border-radius: .2em;
   background-color:#F5F2F0;
@@ -49,14 +67,8 @@ a {
 }
 
 section {
-  margin: 4em 0;
   display: block;
-  width: 100%;
-}
-
-section {
-  display: block;
-  width: 100%;
+  // width: 100%;
   margin-top: 30px;
   h2 {
     &:before {
@@ -78,24 +90,6 @@ section {
   }
 }
 
-header{
-
-  share-buttons{
-    margin: auto;
-    max-width: 690px;
-    width: 100%;
-    button{
-
-      box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-      transform: translate3d(0,0,0);
-      transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
-
-      &:active{
-        box-shadow: 0 3px 4px -2px rgba(0,0,0,.3), 0 2px 4px 0 rgba(0,0,0,.25), 0 4px 6px 0 rgba(0,0,0,.25);
-      }
-    }
-  }
-}
-.container{
-  overflow: hidden;
+header {
+  margin-top: 0;
 }

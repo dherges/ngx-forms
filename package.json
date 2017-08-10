@@ -30,6 +30,7 @@
   "typings": "./dist",
   "scripts": {
     "build:demo": "cd demo/ && npm run build",
+    "demo": "cd demo/ && npm start",
     "start": "gulp build",
     "test": " gulp test"
   },

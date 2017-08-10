@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/npm/v/@ngx-plus/ngx-forms.svg?maxAge=2592000?style=plastic" />
   </a>
   <a href="https://ngx-plus.github.io/ngx-forms/">
-    <img src="https://img.shields.io/badge/demo-online-ed1c46.svg" />
+    <img src="https://img.shields.io/badge/demo-online-61B5D9.svg" />
   </a>
   <a href="https://travis-ci.org/ngx-plus/ngx-forms">
     <img src="https://travis-ci.org/ngx-plus/ngx-forms.svg?branch=master" />
