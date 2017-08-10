@@ -4,7 +4,7 @@ import { FormGroup } from '@angular/forms'
 @Component({
   selector: 'ngx-form',
   template: `
-    <form class="card" role="form" novalidate [formGroup]="form">
+    <form class="card" novalidate [formGroup]="form">
       <ngx-form-header class="card-header"
                        *ngIf="config.icon || config.title"
                        [icon]="config.icon" [title]="config.title" [item]="item">
