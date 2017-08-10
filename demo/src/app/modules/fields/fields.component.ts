@@ -4,15 +4,12 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 @Component({
   selector: 'fields',
   templateUrl: './fields.component.html',
-  styleUrls: ['./fields.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FieldsComponent {
 
   constructor(private forms: NgxFormsService) { }
-
-  // TODO: figure out why code snippets don't display on page load
 
   item = {}
 
