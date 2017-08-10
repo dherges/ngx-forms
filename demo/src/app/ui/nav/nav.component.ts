@@ -36,6 +36,7 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
       </div>
     </nav>
   `,
+  styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavComponent {

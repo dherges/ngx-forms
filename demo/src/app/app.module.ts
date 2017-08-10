@@ -6,21 +6,37 @@ import { MdButtonModule } from '@angular/material'
 import { NgxFormsModule } from '@ngx-plus/ngx-forms'
 
 import { SharedModule } from './shared/shared.module'
-
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './header/header.component'
-import { InstallationComponent } from './installation/installation.component'
-import { SetupComponent } from './setup/setup.component'
-import { UsageComponent } from './usage/usage.component'
+// modules
+import { DemoComponent } from './modules/demo/demo.component'
+import { FieldsComponent } from './modules/fields/fields.component'
+import { InstallationComponent } from './modules/installation/installation.component'
+import { NotesComponent } from './modules/notes/notes.component'
+import { SetupComponent } from './modules/setup/setup.component'
+import { UsageComponent } from './modules/usage/usage.component'
+// ui
+import { FooterComponent } from './ui/footer/footer.component'
+import { HeaderComponent } from './ui/header/header.component'
+import { NavComponent } from './ui/nav/nav.component'
+import { ThemeComponent } from './ui/theme/theme.component'
 
-import { FooterComponent } from './footer/footer.component'
-import { NotesComponent } from './notes/notes.component'
-
-import { FieldsComponent } from './fields/fields.component'
 import { AppRoutingModule } from './app-routing.module'
-import { DemoComponent } from './demo/demo.component'
-import { NavComponent } from './nav/nav.component'
-import { ThemeComponent } from './nav/theme/theme.component'
+
+const modules = [
+  DemoComponent,
+  FieldsComponent,
+  InstallationComponent,
+  NotesComponent,
+  SetupComponent,
+  UsageComponent,
+]
+
+const ui = [
+  FooterComponent,
+  HeaderComponent,
+  NavComponent,
+  ThemeComponent,
+]
 
 @NgModule({
   imports: [
@@ -35,16 +51,8 @@ import { ThemeComponent } from './nav/theme/theme.component'
   ],
   declarations: [
     AppComponent,
-    HeaderComponent,
-    InstallationComponent,
-    SetupComponent,
-    UsageComponent,
-    FieldsComponent,
-    FooterComponent,
-    NotesComponent,
-    DemoComponent,
-    NavComponent,
-    ThemeComponent,
+    ...modules,
+    ...ui,
   ],
   bootstrap: [AppComponent]
 })

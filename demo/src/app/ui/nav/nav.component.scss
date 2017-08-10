@@ -1,0 +1,55 @@
+@import '../../../assets/style/variables';
+
+:host {
+  display       : flex;
+  flex-direction: column;
+  align-content : center;
+  overflow      : hidden;
+  text-align    : center;
+}
+
+h1 {
+  font-size    : 3em;
+  margin-bottom: 0;
+  @media only screen and (max-device-width : 480px) {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  color : $output-color;
+  margin: 1em 0;
+  @media only screen and (max-device-width : 480px) {
+    font-size: 1em;
+  }
+}
+
+h3:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    opacity: 0.1;
+    background-color: black;
+    margin-top: 15px;
+}
+
+img {
+  width: 300px;
+}
+
+.cover {
+  font-size      : 0.7em;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  margin         : 3em 0;
+  position       : relative;
+}
+
+.ribbon {
+  position: fixed;
+  top     : 0;
+  right   : 0;
+  border  : 0;
+}
