@@ -6,6 +6,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
   template: `
     <demo-nav [items]="items"></demo-nav>
     <router-outlet></router-outlet>
+    <footer></footer>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
