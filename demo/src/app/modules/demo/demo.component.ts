@@ -9,7 +9,17 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 })
 export class DemoComponent {
 
-  item = {}
+  item = {
+    input: null,
+    email: null,
+    password: null,
+    date: null,
+    textarea: null,
+    wysiwyg: null,
+    select: null,
+  }
+
+  result = {}
 
   formConfig = {
     title: 'Ngx-Forms',
@@ -19,7 +29,7 @@ export class DemoComponent {
       { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },
     ],
     fields: [
-      this.forms.input('inputField', {
+      this.forms.input('input', {
         label: 'Input',
         placeholder: 'Input',
       }),
@@ -59,7 +69,7 @@ export class DemoComponent {
   constructor(private forms: NgxFormsService) { }
 
   handleAction($event) {
-    console.log('$event', $event)
+    this.result = $event
   }
 
 }

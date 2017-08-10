@@ -10,15 +10,12 @@
       </ngx-form>
     </div>
     <div class="col-md-4">
-      <div class="card">
-        <div class="card-header">
-          <i class="fa fa-database"></i>
-          Data
-        </div>
-        <div class="card-block">
-          <pre>{{ item | json }}</pre>
-        </div>
-      </div>
+      <ui-card icon="fa fa-database" title="Data">
+        <pre class="ui-card-block">{{ item | json }}</pre>
+      </ui-card>
+      <ui-card icon="fa fa-database" title="Result">
+        <pre class="ui-card-block">{{ result | json }}</pre>
+      </ui-card>
     </div>
   </div>
 </section>

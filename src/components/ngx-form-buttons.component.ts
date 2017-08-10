@@ -19,6 +19,6 @@ export class NgxFormButtonsComponent {
   @Output() action = new EventEmitter()
   click(type, payload) {
     payload = payload || this.item
-    this.action.emit({ type, payload })
+    this.action.emit({ type, payload: Object.assign({}, payload) })
   }
 }
