@@ -80,6 +80,7 @@
     "karma-remap-coverage": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "2.0.4",
+    "lerna": "^2.0.0",
     "node-sass": "^4.5.3",
     "null-loader": "^0.1.1",
     "postcss": "^6.0.8",
