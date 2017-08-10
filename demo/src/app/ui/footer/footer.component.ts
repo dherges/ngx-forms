@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, VERSION } from '@angular/core'
 
 @Component({
   selector: 'ui-footer',
@@ -8,8 +8,12 @@ import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public ngVersion: string
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.ngVersion = VERSION.full
+  }
 
 }

@@ -12,8 +12,8 @@ export class DemoComponent {
   item = {}
 
   formConfig = {
-    title: 'ngx-forms',
-    icon: 'fa fa-magic',
+    title: 'Ngx-Forms',
+    icon: 'fa fa-tasks',
     buttons: [
       { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' } },
       { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },

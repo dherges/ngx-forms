@@ -118,7 +118,7 @@ export class FieldsComponent {
       }
     },
     {
-      name: 'select',
+      name: 'wysiwyg',
       code: {
         template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
         code: `formConfig: {

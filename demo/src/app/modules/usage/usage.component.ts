@@ -64,11 +64,10 @@ export class MyComponent {
   }
 }`
 
-  templateCode = `<ngx-form
-  [config]="formConfig"
-  [item]="item"
-  (action)="handleAction($event)">
-</ngx-form>`
+  templateCode = `  <ngx-form [config]="formConfig"
+            [item]="item"
+            (action)="handleAction($event)">
+  </ngx-form>`
 
   item = {}
 

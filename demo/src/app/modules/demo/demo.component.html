@@ -1,16 +1,22 @@
 <ui-header></ui-header>
 <section>
   <h2>Demo</h2>
-  <p>This form is rendered by ngx-forms. Check the <a routerLink="/usage">usage</a> page to see how it's implemented.</p>
+  <p class="lead">This form is rendered by ngx-forms. Check the <b><a routerLink="/usage">usage</a></b> page to see how it's implemented.</p>
   <div class="row">
     <div class="col-md-8">
-      <ngx-form [config]="formConfig" [item]="item" (action)="handleAction($event)"></ngx-form>
+      <ngx-form [config]="formConfig"
+                [item]="item"
+                (action)="handleAction($event)">
+      </ngx-form>
     </div>
     <div class="col-md-4">
       <div class="card">
-        <div class="card-header">Data</div>
+        <div class="card-header">
+          <i class="fa fa-database"></i>
+          Data
+        </div>
         <div class="card-block">
-          <pre>{{item | json}}</pre>
+          <pre>{{ item | json }}</pre>
         </div>
       </div>
     </div>
