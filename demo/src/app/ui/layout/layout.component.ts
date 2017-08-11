@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 
 @Component({
@@ -11,11 +11,13 @@ import { ActivatedRoute } from '@angular/router'
     <ui-footer></ui-footer>
   `,
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
 
   items = []
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
     this.route.data.subscribe(d => this.items = d['headerItems'])
   }
 }
