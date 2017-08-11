@@ -5,7 +5,9 @@ import { NavigationEnd, Router } from '@angular/router'
   selector: 'app-root',
   template: `
     <ui-nav [items]="items"></ui-nav>
-    <router-outlet></router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
     <ui-footer></ui-footer>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush

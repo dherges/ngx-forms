@@ -11,6 +11,15 @@ export class FieldsComponent {
 
   constructor(private forms: NgxFormsService) { }
 
+  exampleConfig = `formConfig: {
+  fields: [
+    this.forms.input('inputField', {
+      label: 'My Input',
+      placeholder: 'My Input',
+    }),
+  ]
+}`
+
   item = {}
 
   fields = [

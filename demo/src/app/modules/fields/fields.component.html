@@ -1,5 +1,18 @@
 <section>
   <h2>Fields</h2>
+
+  <p class="lead">
+    The NgxFormsService can generate field definitions that can be used in the `fields` array in the form config.
+  </p>
+
+  <ui-card icon="fa fa-code" title="Code">
+    <highlight lang="ts" [code]="exampleConfig"></highlight>
+  </ui-card>
+
+</section>
+<section>
+  <h2>Field Types</h2>
+
   <div *ngFor="let field of fields">
     <h3 class="my-4">{{field.name}}</h3>
 

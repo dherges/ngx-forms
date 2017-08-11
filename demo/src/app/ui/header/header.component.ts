@@ -7,6 +7,6 @@ import {Component, ChangeDetectionStrategy} from '@angular/core'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-  title = 'ngx-forms'
+  title = '@ngx-plus/ngx-forms'
   description = 'Advanced Angular Form Development'
 }
