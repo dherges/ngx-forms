@@ -1,3 +1,18 @@
-$action-color: #D62D20;
-$output-color: #61B5D9;
-$font-color  : #011F4B;
+// ngx-plus color scheme
+$ngx-plus-red: #D32F2F;
+$ngx-plus-primary: #011F4B;
+$ngx-plus-blue: #61B5D9;
+$ngx-plus-yellow: #FDD835;
+$ngx-plus-green: #66BB6A;
+$ngx-plus-background: #243447;
+
+// Override Bootstrap
+$brand-info: $ngx-plus-blue;
+$brand-primary: $ngx-plus-primary;
+$brand-success: $ngx-plus-green;
+$brand-warning: $ngx-plus-yellow;
+$brand-danger: $ngx-plus-red;
+$btn-warning-color: $ngx-plus-background;
+
+$action-color: $ngx-plus-blue;
+$output-color: $ngx-plus-blue;
