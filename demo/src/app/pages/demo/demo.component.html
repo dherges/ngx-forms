@@ -6,13 +6,26 @@
     Follow the steps on the <b><a routerLink="/installation">installation</a></b> page to get started.
   </p>
   <div class="row">
-    <div class="col-md-8">
-      <ngx-form [config]="formConfig"
-                [item]="item"
-                (action)="handleAction($event)">
-      </ngx-form>
+    <div class="col-md-6">
+      <ui-card [icon]="config.icon" [title]="config.title">
+        <div class="ui-card-block">
+          <ngx-form-fields
+            [fields]="config.fields"
+            [item]="item"
+            (action)="handleAction($event)">
+          </ngx-form-fields>
+          <ngx-form-buttons
+            [buttons]="config.buttons"
+            [item]="item"
+            (action)="handleAction($event)">
+          </ngx-form-buttons>
+        </div>
+      </ui-card>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
+      <ui-card icon="fa fa-code" title="Form Configuration">
+        <highlight lang="ts" [code]="configString"></highlight>
+      </ui-card>
       <ui-card icon="fa fa-database" title="Data">
         <pre class="ui-card-block">{{ item | json }}</pre>
       </ui-card>

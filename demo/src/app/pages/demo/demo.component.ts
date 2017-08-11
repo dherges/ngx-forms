@@ -21,13 +21,9 @@ export class DemoComponent {
 
   result = {}
 
-  formConfig = {
+  config = {
     title: 'Ngx-Forms',
     icon: 'fa fa-tasks',
-    buttons: [
-      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' } },
-      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },
-    ],
     fields: [
       this.forms.input('input', {
         label: 'Input',
@@ -59,12 +55,71 @@ export class DemoComponent {
           { label: 1, value: 1 },
           { label: 2, value: 2 },
           { label: 3, value: 3 },
-          { label: 4, value: 4 },
-          { label: 5, value: 5 },
         ]
       }),
-    ]
+    ],
+    buttons: [{
+      label: 'Save',
+      type: 'submit',
+      classNames: 'btn-primary',
+      click: { type: 'submit' },
+    }, {
+      label: 'Cancel',
+      type: 'button',
+      classNames: 'btn-secondary',
+      click: { type: 'cancel' },
+    } ],
   }
+
+  configString = `{
+  title: 'Ngx-Forms',
+  icon: 'fa fa-tasks',
+  fields: [
+    this.forms.input('input', {
+      label: 'Input',
+      placeholder: 'Input',
+    }),
+    this.forms.email('email', {
+      label: 'Email',
+      placeholder: 'Email',
+    }),
+    this.forms.password('password', {
+      label: 'Password',
+      placeholder: 'Password',
+    }),
+    this.forms.date('date', {
+      label: 'Date',
+      placeholder: 'Date',
+    }),
+    this.forms.textarea('textarea', {
+      label: 'Textarea',
+      placeholder: 'Textarea',
+    }),
+    this.forms.wysiwyg('wysiwyg', {
+      label: 'Wysiwyg',
+      placeholder: 'Wysiwyg',
+    }),
+    this.forms.select('select', {
+      label: 'Select',
+      options: [
+        { label: 1, value: 1 },
+        { label: 2, value: 2 },
+        { label: 3, value: 3 },
+      ]
+    }),
+  ],
+  buttons: [{
+    label: 'Save',
+    type: 'submit',
+    classNames: 'btn-primary',
+    click: { type: 'submit' },
+  }, {
+    label: 'Cancel',
+    type: 'button',
+    classNames: 'btn-secondary',
+    click: { type: 'cancel' },
+  } ],
+}`
 
   constructor(private forms: NgxFormsService) { }
 
