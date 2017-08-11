@@ -1,11 +1,9 @@
-import {Component, ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core'
+import { Component } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'fields',
   templateUrl: './fields.component.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FieldsComponent {
 
@@ -13,9 +11,9 @@ export class FieldsComponent {
 
   exampleConfig = `formConfig: {
   fields: [
-    this.forms.input('inputField', {
-      label: 'My Input',
-      placeholder: 'My Input',
+    this.forms.input('name', {
+      label: 'Name',
+      placeholder: 'Please enter your name',
     }),
   ]
 }`

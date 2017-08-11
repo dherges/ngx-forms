@@ -1,30 +1,25 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
+import 'rxjs/add/operator/filter'
 
 @Component({
   selector: 'app-root',
   template: `
-    <ui-nav [items]="items"></ui-nav>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
-    <ui-footer></ui-footer>
+
+    <router-outlet></router-outlet>
+    <!--<ui-layout></ui-layout>-->
+    
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
 
-  items = [
-    { name: 'Demo', link: ['/'] },
-    { name: 'Installation', link: ['/', 'installation'] },
-    { name: 'Usage', link: ['/', 'usage'] },
-    { name: 'Fields', link: ['/', 'fields'] },
-  ]
-
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.router.events.subscribe(e => e instanceof NavigationEnd ? document.body.scrollTop = 0 : 0)
+    this.router.events
+      .filter(e => e instanceof NavigationEnd)
+      .subscribe(() => document.body.scrollTop = 0)
   }
 
 }

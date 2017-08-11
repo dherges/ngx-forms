@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component'
 import { HeaderComponent } from './header/header.component'
 import { NavComponent } from './nav/nav.component'
 import { CardComponent } from './card/card.component'
+import { LayoutComponent } from './layout/layout.component'
 
 const ui = [
   FooterComponent,
@@ -22,6 +23,7 @@ const ui = [
   SanitizerPipe,
   HighlightDirective,
   CardComponent,
+  LayoutComponent,
 ]
 
 @NgModule({
@@ -33,6 +35,7 @@ const ui = [
     ...ui,
   ],
   exports: [
+    // CommonModule,
     ...ui,
   ],
 })
