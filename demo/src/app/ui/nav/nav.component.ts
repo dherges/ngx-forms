@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
+import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core'
+import { NavigationEnd, Router } from '@angular/router'
 
 @Component({
   selector: 'ui-nav',
@@ -15,14 +16,27 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
             </a>
           </div>
           <div class="col">
-            <ul class="navbar-nav">
-              <li class="nav-item"
-                  *ngFor="let item of items"
-                  [routerLinkActiveOptions]="{ exact: true }"
-                  routerLinkActive="active">
-                <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
-              </li>
-            </ul>
+            <button
+              class="navbar-toggler" type="button"
+              data-toggle="collapse" data-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+              (click)="collapsed = !collapsed">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" [class.show]="collapsed" id="navbarTogglerDemo01">
+              <div [class.container]="!collapsed">
+                <ul class="navbar-nav">
+                  <li class="nav-item"
+                      *ngFor="let item of items"
+                      [routerLinkActiveOptions]="{ exact: true }"
+                      routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
           <div class="col-2 align-self-center">
             <div class="github-buttons hidden-md-down">
@@ -42,16 +56,17 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core'
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
 
-  public themeDropOpen = false
+  public collapsed = false
   public logo = 'assets/img/ngx-plus-light.svg'
 
   @Input() items: any[]
-  @Input() themes: any[]
 
-  toggleThemeDrop() {
-    this.themeDropOpen = !this.themeDropOpen
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events.subscribe(e => e instanceof NavigationEnd ? this.collapsed = false : '')
   }
 
 }
