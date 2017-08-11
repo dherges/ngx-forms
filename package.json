@@ -16,10 +16,13 @@
   },
   "keywords": [
     "angular",
+    "angular2",
+    "angular4",
     "forms",
+    "ngx-forms",
     "ngx-plus",
     "colmena",
-    "ngx-forms"
+    "ngx"
   ],
   "contributors": [
     "Brannon N. Darby II <brannon@ngx.plus> (https://github.com/brannon-darby)",
@@ -30,6 +33,7 @@
   "typings": "./dist",
   "scripts": {
     "build:demo": "cd demo/ && npm run build",
+    "clean": "node bin/clean",
     "demo": "cd demo/ && npm start",
     "start": "gulp build",
     "test": " gulp test"
