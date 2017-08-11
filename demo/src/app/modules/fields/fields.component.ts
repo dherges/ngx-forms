@@ -17,18 +17,13 @@ export class FieldsComponent {
     {
       name: 'input',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.input('inputField', {
-      label: 'My Input',
-      placeholder: 'My Input',
-    }),
-  ]
-}`    },
+        code: `this.forms.input('input', {
+  label: 'My Input',
+  placeholder: 'My Input',
+})`    },
       formConfig: {
         fields: [
-          this.forms.input('inputField', {
+          this.forms.input('input', {
             label: 'My Input',
             placeholder: 'My Input',
           }),
@@ -38,15 +33,10 @@ export class FieldsComponent {
     {
       name: 'email',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.email('emailField', {
-      label: 'My Email',
-      placeholder: 'My Email',
-    }),
-  ]
-}`    },
+        code: `this.forms.email('emailField', {
+  label: 'My Email',
+  placeholder: 'My Email',
+})`    },
       formConfig: {
         fields: [
           this.forms.email('emailField', {
@@ -59,15 +49,10 @@ export class FieldsComponent {
     {
       name: 'password',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.password('passwordField', {
-      label: 'My Password',
-      placeholder: 'My Password',
-    }),
-  ]
-}`    },
+        code: `this.forms.password('passwordField', {
+  label: 'My Password',
+  placeholder: 'My Password',
+})`    },
       formConfig: {
         fields: [
           this.forms.password('passwordField', {
@@ -80,14 +65,9 @@ export class FieldsComponent {
     {
       name: 'date',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.date('dateField', {
-      label: 'My Date',
-    }),
-  ]
-}`    },
+        code: `this.forms.date('dateField', {
+  label: 'My Date',
+})`    },
       formConfig: {
         fields: [
           this.forms.date('dateField', {
@@ -99,15 +79,10 @@ export class FieldsComponent {
     {
       name: 'textarea',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.textarea('textareaField', {
-      label: 'My Textarea',
-      placeholder: 'My Textarea',
-    }),
-  ]
-}`    },
+        code: `this.forms.textarea('textareaField', {
+  label: 'My Textarea',
+  placeholder: 'My Textarea',
+})`    },
       formConfig: {
         fields: [
           this.forms.textarea('textareaField', {
@@ -120,15 +95,10 @@ export class FieldsComponent {
     {
       name: 'wysiwyg',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.wysiwyg('wysiwygField', {
-      label: 'My Wysiwyg',
-      placeholder: 'My Wysiwyg',
-    }),
-  ]
-}`    },
+        code: `this.forms.wysiwyg('wysiwygField', {
+  label: 'My Wysiwyg',
+  placeholder: 'My Wysiwyg',
+})`    },
       formConfig: {
         fields: [
           this.forms.wysiwyg('wysiwygField', {
@@ -141,21 +111,14 @@ export class FieldsComponent {
     {
       name: 'select',
       code: {
-        template: `<ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>`,
-        code: `formConfig: {
-  fields: [
-    this.forms.select('selectField', {
-      label: 'My Select',
-      options: [
-        { label: 1, value: 1 },
-        { label: 2, value: 2 },
-        { label: 3, value: 3 },
-        { label: 4, value: 4 },
-        { label: 5, value: 5 },
-      ]
-    }),
+        code: `this.forms.select('selectField', {
+  label: 'My Select',
+  options: [
+    { label: 1, value: 1 },
+    { label: 2, value: 2 },
+    { label: 3, value: 3 },
   ]
-}`    },
+})`    },
       formConfig: {
         fields: [
           this.forms.select('selectField', {
@@ -164,8 +127,6 @@ export class FieldsComponent {
               { label: 1, value: 1 },
               { label: 2, value: 2 },
               { label: 3, value: 3 },
-              { label: 4, value: 4 },
-              { label: 5, value: 5 },
             ]
           }),
         ]
