@@ -292,21 +292,6 @@ gulp.task('demo', (done) => {
 
 });
 
-// Link 'dist' folder (create a local 'ngx-forms' package that symlinks to it)
-// This way, we can have the demo project declare a dependency on 'ngx-forms' (as it should)
-// and, thanks to 'npm link ngx-forms' on demo project, be sure to always use the latest built
-// version of the library ( which is in 'dist/' folder)
-
-// run 'npm link' from 'dist' folder
-gulp.task('link', (done) => {
-  exec('npm link', { cwd: `${config.outputDir}` }, execCallback(done));
-});
-
-// run 'npm link' in the 'demo' folder
-gulp.task('link:demo', (done) => {
-  exec('npm link @ngx-plus/ngx-forms', { cwd: `${config.demoDir}` }, execCallback(done));
-});
-
 // Upload code coverage report to coveralls.io (will be triggered by Travis CI on successful build)
 gulp.task('coveralls', () => {
     return gulp.src(`${config.coverageDir}/coverage.lcov`)

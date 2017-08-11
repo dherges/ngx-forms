@@ -4,7 +4,6 @@ notifications:
 sudo: required
 dist: trusty
 
-#install google chrome, using addons
 addons:
   apt:
     sources:
@@ -21,23 +20,13 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - npm install --quiet -g gulp-cli @angular/cli
   - npm install
-  - cd demo && npm install && cd -
+  - npx lerna bootstrap
 
 script:
   - gulp test:ci
-  - gulp link
-  - gulp link:demo
-  - npm run build:demo:ci
+  - npm run build:demo
 
 after_success: gulp coveralls
-
-#deploy:
-#  - provider: script
-#    skip_cleanup: true
-#    script: bin/deploy-gh-pages.sh
-#    on:
-#      branch: master
-#      all_branches: true
 
 cache:
   directories:
