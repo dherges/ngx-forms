@@ -15,7 +15,7 @@ import { NavigationEnd, Router } from '@angular/router'
 export class AppComponent implements OnInit {
 
   items = [
-    { name: 'Demo', link: ['/demo'] },
+    { name: 'Demo', link: ['/'] },
     { name: 'Installation', link: ['/', 'installation'] },
     { name: 'Usage', link: ['/', 'usage'] },
     { name: 'Fields', link: ['/', 'fields'] },
@@ -24,7 +24,6 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Scroll to top on NavigationEnd
     this.router.events.subscribe(e => e instanceof NavigationEnd ? document.body.scrollTop = 0 : 0)
   }
 
