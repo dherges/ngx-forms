@@ -1,23 +1,24 @@
-<section>
+<section class="mt-3">
   <h2>Installation</h2>
-  <p>Install with <b>npm</b></p>
-  <highlight [code]="installCode"></highlight>
+  <p class="lead">Install with <b>npm</b></p>
+  <div class="sub-section">
+    <highlight [code]="installCode"></highlight>
+  </div>
 </section>
 
 <section>
   <h2>Setup</h2>
-
-  <p>Import <b>NgxFormsModule</b> in the root module</p>
-
-  <ui-card icon="fa fa-code" title="Code">
-    <highlight [lang]="'ts'"
-               [code]="importCode">
-    </highlight>
-  </ui-card>
-
-  <div class="mt-3">
-    <p class="lead">Check the <b><a routerLink="/usage">usage</a></b> page to see how to build your first form.</p>
+  <p class="lead">Import <b>NgxFormsModule</b> in the root module</p>
+  <div class="sub-section">
+    <ui-card icon="fa fa-code" title="Code">
+      <highlight [lang]="'ts'"
+                 [code]="importCode">
+      </highlight>
+    </ui-card>
   </div>
-
 </section>
 
+<section>
+  <h2>Next</h2>
+  <p class="lead sub-section">Check out the <b><a routerLink="/usage">Usage</a></b> page to learn how to build a form.</p>
+</section>

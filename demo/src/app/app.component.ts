@@ -9,13 +9,11 @@ import 'rxjs/add/operator/filter'
   `,
 })
 export class AppComponent implements OnInit {
-
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events
       .filter(e => e instanceof NavigationEnd)
-      .subscribe(() => document.body.scrollTop = 0)
+      .subscribe(() => (document.body.scrollTop = 0))
   }
-
 }

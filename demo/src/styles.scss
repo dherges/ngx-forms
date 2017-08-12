@@ -1,24 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-@import url( 'https://fonts.googleapis.com/css?family=Play:400,700');
-@import url( 'https://bootswatch.com/4-alpha/cosmo/bootstrap.min.css');
 @import '~animate.css';
 @import '~prismjs/themes/prism';
 @import '~font-awesome/css/font-awesome.min.css';
 @import './assets/style/variables';
+@import '~bootstrap/scss/bootstrap';
 @import '../../src/scss/styles';
 
 body {
-  height    : 100vh;
   overflow-x: hidden;
-  padding   : 80px 0px;
-  width     : 100vw;
+  padding-top: 80px;
 }
 
 .navbar-brand,
 h1,
 h2 {
-  color      : $brand-primary !important;
-  font-family: 'Play', sans-serif;
+  color: $brand-primary !important;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.sub-section {
+  background-color: rgba(25, 118, 210, .03);
+  border-left: 5px solid lighten($brand-info, 15%);
+  padding: 10px;
+  margin-bottom: 8px;
+  display: table;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 code[highlight] {
@@ -27,12 +39,12 @@ code[highlight] {
 
 code[highlight],
 highlight {
-  border-radius   : 0.2em;
-  background-color: #F5F2F0;
+  border-radius: 0.2em;
+  background-color: #f5f2f0;
 }
 
 .ui-card-block {
-  background-color: #F5F2F0;
+  background-color: #f5f2f0;
   padding: 10px;
 }
 
@@ -46,31 +58,31 @@ img {
 
 a {
   text-decoration: none;
-  color          : $action-color;
+  color: $action-color;
 }
 
 section {
-  display   : block;
+  display: block;
   // width: 100%;
   margin-top: 30px;
 
   h2 {
     &:before {
-      color       : $action-color;
-      content     : '\f0da';
-      font-family : "FontAwesome";
-      float       : left;
+      color: $action-color;
+      content: '\f0da';
+      font-family: "FontAwesome";
+      float: left;
       margin-right: 10px;
     }
 
     &:after {
-      content         : '';
-      display         : block;
-      height          : 1px;
-      width           : 100%;
-      opacity         : 0.1;
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      opacity: 0.1;
       background-color: black;
-      margin-top      : 15px;
+      margin-top: 15px;
     }
   }
 }

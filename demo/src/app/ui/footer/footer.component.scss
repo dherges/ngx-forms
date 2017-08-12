@@ -1,12 +1,11 @@
 @import '../../../assets/style/variables';
 
 .footer {
-  background  : $brand-primary;
-  bottom      : 0;
-  color       : #ccc;
-  padding     : 5px 20px;
-  text-align  : center;
-  width       : 100vw;
+  background: $brand-primary;
+  bottom: 0;
+  color: #ccc;
+  left: -15px;
+  width: 100vw;
 
   a {
     color: #ccc;

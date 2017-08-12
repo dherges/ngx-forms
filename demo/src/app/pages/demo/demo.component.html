@@ -1,37 +1,40 @@
-<ui-header></ui-header>
-<section>
+<section class="mt-3">
   <h2>Demo</h2>
   <p class="lead">
-    This form is rendered by ngx-forms.
-    Follow the steps on the <b><a routerLink="/installation">installation</a></b> page to get started.
+    The form below is rendered by <b>ngx-forms</b>. Follow the steps on the <b><a routerLink="/installation">Installation</a></b> page to get started.
   </p>
-  <div class="row">
-    <div class="col-md-6">
-      <ui-card [icon]="config.icon" [title]="config.title">
-        <div class="ui-card-block">
-          <ngx-form-fields
-            [fields]="config.fields"
-            [item]="item"
-            (action)="handleAction($event)">
-          </ngx-form-fields>
-          <ngx-form-buttons
-            [buttons]="config.buttons"
-            [item]="item"
-            (action)="handleAction($event)">
-          </ngx-form-buttons>
-        </div>
-      </ui-card>
-    </div>
-    <div class="col-md-6">
-      <ui-card icon="fa fa-code" title="Form Configuration">
-        <highlight lang="ts" [code]="configString"></highlight>
-      </ui-card>
-      <ui-card icon="fa fa-database" title="Data">
-        <pre class="ui-card-block">{{ item | json }}</pre>
-      </ui-card>
-      <ui-card icon="fa fa-database" title="Result">
-        <pre class="ui-card-block">{{ result | json }}</pre>
-      </ui-card>
+  <div class="sub-section">
+    <div class="row">
+      <div class="col-md-6">
+        <ui-card [icon]="config.icon" [title]="config.title">
+          <div class="ui-card-block">
+            <ngx-form-fields
+              [fields]="config.fields"
+              [item]="item"
+              (action)="handleAction($event)">
+            </ngx-form-fields>
+            <ngx-form-buttons
+              [buttons]="config.buttons"
+              [item]="item"
+              (action)="handleAction($event)">
+            </ngx-form-buttons>
+          </div>
+        </ui-card>
+      </div>
+      <div class="col-md-6">
+        <ui-card icon="fa fa-fw fa-html5" title="Template">
+          <highlight lang="html" [code]="templateString"></highlight>
+        </ui-card>
+        <ui-card icon="fa fa-fw fa-code" title="Form Configuration">
+          <highlight lang="ts" [code]="configString"></highlight>
+        </ui-card>
+        <ui-card icon="fa fa-fw fa-database" title="Data">
+          <pre class="ui-card-block">{{ item | json }}</pre>
+        </ui-card>
+        <ui-card icon="fa fa-fw fa-random" title="Result">
+          <pre class="ui-card-block">{{ result | json }}</pre>
+        </ui-card>
+      </div>
     </div>
   </div>
 </section>

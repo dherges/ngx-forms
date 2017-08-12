@@ -5,21 +5,21 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
   selector: 'usage',
   templateUrl: './usage.component.html',
   styleUrls: ['./usage.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsageComponent {
-
   steps = [
     {
+      order: 1,
       title: `Inject <b>NgxFormsService</b>`,
-      description: `The NgxFormsService service can be used to generate the field definitions in the form config.`,
+      description: `The <b>NgxFormsService</b> can be used to generate the field definitions in the form config.`,
       code: {
         lang: 'ts',
         code: `constructor(private forms: NgxFormsService) { }`,
       },
     },
     {
-      title: `Define the form configuration`,
+      title: `Define the <b>Form Configuration</b>`,
       code: {
         lang: 'ts',
         code: `public formConfig = {
@@ -37,54 +37,64 @@ export class UsageComponent {
       },
     },
     {
-      title: 'Add method to handle form actions',
-      description: 'This method is triggered by the form actions like a button click.',
+      title: 'Create a method to handle <b>Form Actions</b>',
+      description:
+        'This method will be triggered by the form actions (button click, etc.)',
       code: {
         lang: 'ts',
         code: `public handleAction($event) {
   console.log('$event', $event)
-}`
-      }
+}`,
+      },
     },
     {
-      title: 'Create a variable to store the form data',
+      title: 'Create a variable to store the <b>Form Data</b>',
       code: {
         lang: 'ts',
-        code: `public item: any = {}`
-      }
+        code: `public item: any = {}`,
+      },
     },
     {
-      title: 'Create an instance of <b>ngx-form</b> the form and pass in the variables',
+      title: 'Create an instance of <b>ngx-form</b> and pass in the variables',
       code: {
         lang: 'html',
-        code: `<ngx-form
-  [config]="formConfig"
-  [item]="item"
-  (action)="handleAction($event)">
-</ngx-form>`
-      }
+        code: `<ngx-form [config]="formConfig"
+          [item]="item"
+          (action)="handleAction($event)">
+</ngx-form>`,
+      },
     },
   ]
 
   item: any = {}
 
   formConfig = {
-    title: 'ngx-forms Example Form',
+    title: 'My Form',
     buttons: [
-      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' } },
-      { label: 'Cancel', type: 'button', classNames: 'btn-secondary', click: { type: 'cancel' } },
+      {
+        label: 'Save',
+        type: 'submit',
+        classNames: 'btn-primary',
+        click: { type: 'submit' },
+      },
+      {
+        label: 'Cancel',
+        type: 'button',
+        classNames: 'btn-secondary',
+        click: { type: 'cancel' },
+      },
     ],
     fields: [
       this.forms.input('input', {
         label: 'Input',
         placeholder: 'Input',
       }),
-    ]
+    ],
   }
 
   public handleAction($event) {
     console.log('$event', $event)
   }
 
-  constructor(private forms: NgxFormsService) { }
+  constructor(private forms: NgxFormsService) {}
 }

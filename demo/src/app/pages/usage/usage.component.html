@@ -1,25 +1,32 @@
-<section>
+<section class="mt-3">
   <h2>Usage</h2>
-  <p class="lead">
-    Make sure to install ngx-forms using the info on the <b><a routerLink="/installation">Installation</a></b> page.
+  <p class="lead sub-section">
+    Ensure that you install <b><i>@ngx-plus/ngx-forms</i></b> before proceeding - details can be found on the <b><a routerLink="/installation">Installation</a></b> page.
   </p>
+  <ul>
+    <li *ngFor="let step of steps">
+      <h4 [innerHtml]="step.title"></h4>
+      <p class="lead" [innerHtml]="step.description"></p>
+      <ui-card [icon]="'fa fa-' + ((step.code.lang === 'ts') ? 'code' : 'html5')"
+               [title]="(step.code.lang === 'ts') ? 'Code' : 'Template'"
+               *ngIf="step.code.code">
+        <highlight [lang]="step.code.lang"
+                   [code]="step.code.code">
+        </highlight>
+      </ui-card>
+    </li>
+    <li>
+      <h4>The result is a new form</h4>
+      <div class="mb-4">
+        <ngx-form [item]="item" (action)="handleAction($event)" [config]="formConfig"></ngx-form>
+      </div>
+    </li>
+  </ul>
+</section>
 
-  <div *ngFor="let step of steps">
-    <h4 [innerHtml]="step.title"></h4>
-    <p  class="lead" [innerHtml]="step.description"></p>
-    <ui-card icon="fa fa-code" title="Code">
-      <highlight [lang]="step.code.lang" [code]="step.code.code"></highlight>
-    </ui-card>
-  </div>
-
-  <h4>Results in a form</h4>
-  <p class="lead">This should render a form like this</p>
-
-  <div class="mb-4">
-    <ngx-form [item]="item" (action)="handleAction($event)" [config]="formConfig"></ngx-form>
-  </div>
-
-  <p class="lead">
-    Check the <b><a routerLink="/fields">fields</a></b> page for an example of the available fields.
+<section>
+  <h2>Next</h2>
+  <p class="lead sub-section">
+    Check the <b><a routerLink="/fields">Fields</a></b> page for an example of the available fields.
   </p>
 </section>

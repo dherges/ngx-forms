@@ -32,10 +32,11 @@
   "main": "./dist",
   "typings": "./dist",
   "scripts": {
+    "build": "gulp build && npm run build:demo",
     "build:demo": "cd demo/ && npm run build",
-    "clean": "node bin/clean",
+    "clean": "gulp clean && node bin/clean",
     "demo": "cd demo/ && npm start",
-    "start": "gulp build",
+    "start": "npm run build",
     "test": " gulp test"
   },
   "dependencies": {
@@ -48,7 +49,7 @@
   },
   "devDependencies": {
     "@angular/animations": "^4.3.4",
-    "@angular/cli": "^1.2.7",
+    "@angular/cli": "1.2.7",
     "@angular/compiler": "^4.3.4",
     "@angular/compiler-cli": "^4.3.4",
     "@angular/platform-browser": "^4.3.4",
