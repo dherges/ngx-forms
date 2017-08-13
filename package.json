@@ -37,6 +37,8 @@
     "build:demo": "cd demo/ && npm run build",
     "clean": "gulp clean && node bin/clean",
     "demo": "cd demo/ && npm start",
+    "ghpages": "cd demo/ && npm run ghpages",
+    "postinstall": "cd demo/ && npm install",
     "start": "npm run build",
     "test": " gulp test",
     "update:contributors": "all-contributors generate"
