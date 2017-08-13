@@ -42,5 +42,9 @@ export class BadgesComponent {
       img:
         'https://coveralls.io/repos/github/ngx-plus/ngx-forms/badge.svg?branch=master',
     },
+    {
+      link: '#contributors',
+      img: 'https://img.shields.io/badge/contributors-2-orange.svg',
+    },
   ]
 }
