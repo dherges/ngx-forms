@@ -105,21 +105,26 @@ const clean = () => {
   const paths = [p, ...getLernaPaths(p)]
 
   hasSubDir(paths, 'node_modules').forEach(dir => {
-    console.log(`[clean] Remove ${dir}`)
+    console.log(`[clean] Removing ${dir}...`)
     rmDirRecursive(dir)
+    console.log(`[clean] ${dir} Removed`)
   })
 
   paths.forEach(p => {
-    const file = path.join(p, 'package-lock.json')
-    console.log(`[clean] Remove ${file}`)
-    if (exists(file)) {
-      fs.unlinkSync(file)
+    const lockFile = path.join(p, 'package-lock.json')
+    if (exists(lockFile)) {
+      console.log(`[clean] Removing ${lockFile}...`)
+      rmFile(lockFile)
+      console.log(`[clean] ${lockFile} Removed`)
     }
   })
 
   console.log('[clean] Done.')
 }
 
+const test = () => {}
+
 module.exports = {
   clean,
+  test,
 }
