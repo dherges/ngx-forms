@@ -32,12 +32,14 @@
   "main": "./dist",
   "typings": "./dist",
   "scripts": {
+    "add": "all-contributors add",
     "build": "gulp build && npm run build:demo",
     "build:demo": "cd demo/ && npm run build",
     "clean": "gulp clean && node bin/clean",
     "demo": "cd demo/ && npm start",
     "start": "npm run build",
-    "test": " gulp test"
+    "test": " gulp test",
+    "update:contributors": "all-contributors generate"
   },
   "dependencies": {
     "@angular/common": "^4.3.4",
@@ -58,6 +60,7 @@
     "@angular/router": "^4.3.4",
     "@types/jasmine": "2.5.53",
     "@types/node": "^8.0.20",
+    "all-contributors-cli": "^4.4.0",
     "angular2-template-loader": "^0.6.2",
     "autoprefixer": "^7.1.2",
     "awesome-typescript-loader": "^3.2.2",

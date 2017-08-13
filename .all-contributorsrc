@@ -1,0 +1,29 @@
+{
+  "projectName": "ngx-forms",
+  "projectOwner": "ngx-plus",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "brannon-darby",
+      "name": "Brannon N. Darby II",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6089253?v=4",
+      "profile": "https://github.com/brannon-darby",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "beeman",
+      "name": "Bram Borggreve",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/36491?v=4",
+      "profile": "http://colmena.io/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
