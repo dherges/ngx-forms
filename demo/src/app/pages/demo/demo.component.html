@@ -1,13 +1,19 @@
-<section class="mt-0">
+<section>
+  <ui-header></ui-header>
+</section>
+<section>
   <h2>Demo</h2>
-  <p class="lead sub-section">
-    The form below is rendered by <b><code>@ngx-plus/ngx-forms</code></b>. Follow the steps on the <b><a routerLink="/installation">Installation</a></b> page to get started.
+  <p>
+    The form below is rendered by
+    <a href="https://github.com/ngx-plus/ngx-forms"><b><code>@ngx-plus/ngx-forms</code></b></a>
+    . Follow the steps on the <b><a routerLink="/installation">Installation</a></b> page to get started.
   </p>
-  <hr class="mt-0">
+</section>
+<section>
   <div class="row">
     <div class="col-md-6">
       <ui-card [icon]="config.icon"
-               [cardTitle]="config.title">
+               [title]="config.title">
         <div class="ui-card-block">
           <ngx-form-fields [fields]="config.fields"
                            [item]="item"
@@ -22,7 +28,7 @@
     </div>
     <div class="col-md-6">
       <ui-card icon="fa fa-fw fa-html5"
-               cardTitle="Template"
+               title="Template"
                includeCopier="true"
                (action)="handleAction({ type: 'CopyCode', payload: templateString })">
         <highlight lang="html"
@@ -30,7 +36,7 @@
         </highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-code"
-               cardTitle="Form Configuration"
+               title="Form Configuration"
                includeCopier="true"
                (action)="handleAction({ type: 'CopyCode', payload: configString })">
         <highlight lang="ts"
@@ -38,11 +44,11 @@
         </highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-database"
-               cardTitle="Data">
+               title="Data">
         <pre class="ui-card-block">{{ item | json }}</pre>
       </ui-card>
       <ui-card icon="fa fa-fw fa-random"
-               cardTitle="Result">
+               title="Result">
         <pre class="ui-card-block">{{ result | json }}</pre>
       </ui-card>
     </div>

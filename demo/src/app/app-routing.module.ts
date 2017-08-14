@@ -6,7 +6,6 @@ import { AppComponent } from './app.component'
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
     children: [
       { path: '', loadChildren: './pages/pages.module#PagesModule' }
     ]

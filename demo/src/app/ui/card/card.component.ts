@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: 'ui-card',
@@ -19,37 +19,41 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-
-  @Input() title: string
   @Input() icon: string
   @Input() includeCopier: boolean = false
-  @Input() set cardTitle(title) {
+  private _title: string
+
+  get title() {
+    return this._title
+  }
+
+  @Input() set title(title) {
     switch (title.toLowerCase()) {
       case 'code':
-        this.title = title
+        this._title = title
         this.includeCopier = true
         break
       case 'template':
-        this.title = title
+        this._title = title
         this.includeCopier = true
         break
       case 'style':
-        this.title = title
+        this._title = title
         break
       case 'buttons':
-        this.title = title
+        this._title = title
         break
       case 'link args':
-        this.title = title
+        this._title = title
         break
       case 'options':
-        this.title = title
+        this._title = title
         break
       default:
-        this.title = title
+        this._title = title
     }
   }
-  @Input() active = false
+
   @Output() action = new EventEmitter()
 
 }

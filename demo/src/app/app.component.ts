@@ -4,11 +4,7 @@ import 'rxjs/add/operator/filter'
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div class="animated fadeIn container-fluid">
-      <router-outlet></router-outlet>
-    </div>
-  `,
+  template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
   constructor(private router: Router) { }

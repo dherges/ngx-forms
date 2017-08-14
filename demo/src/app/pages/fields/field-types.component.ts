@@ -12,7 +12,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
           <div class="col-md-6">
             <ui-card *ngIf="field.code.code"
                      icon="fa fa-code"
-                     cardTitle="Code"
+                     title="Code"
                      (action)="action.emit({ type: 'CopyCode', payload: field.code.code })">
               <highlight lang="ts"
                          [code]="field.code.code">
@@ -20,7 +20,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
             </ui-card>
             <ui-card *ngIf="field.code.template"
                      icon="fa fa-html5"
-                     cardTitle="Template"
+                     title="Template"
                      (action)="action.emit({ type: 'CopyCode', payload: field.code.template })">
               <highlight lang="html"
                          [code]="field.code.template">
@@ -28,7 +28,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
             </ui-card>
           </div>
           <div class="col-md-6">
-            <ui-card icon="fa fa-chevron-right" cardTitle="Output">
+            <ui-card icon="fa fa-chevron-right" title="Output">
               <div class="ui-card-block">
                 <ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>
               </div>

@@ -21,15 +21,6 @@ h1 {
 h3 {
   color: $brand-info;
   font-weight: 300;
-  &:after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 100%;
-    opacity: 0.1;
-    background-color: black;
-    margin-top: 15px;
-  }
 }
 
 img {

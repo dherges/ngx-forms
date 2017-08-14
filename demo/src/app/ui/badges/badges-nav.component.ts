@@ -1,14 +1,9 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  Input,
-  OnInit,
-} from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
-  selector: 'ui-nav-custom',
+  selector: 'badges-nav',
   template: `
-  <div class="mt-1">
+  <div class="mt-1 d-lg-block d-md-none d-sm-none ">
     <iframe id="twitter-widget-0"
             scrolling="no"
             frameborder="0"
@@ -27,10 +22,5 @@ import {
     </iframe>
   </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavCustomComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() { }
-}
+export class BadgesNavComponent {}

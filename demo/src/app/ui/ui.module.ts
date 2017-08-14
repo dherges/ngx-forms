@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
 
 import { BadgesComponent } from './badges/badges.component'
+import { BadgesNavComponent } from './badges/badges-nav.component'
 import { RibbonComponent } from './ribbon/ribbon.component'
 import { SanitizerPipe } from './sanitizer/sanitizer.pipe'
 import { HighlightComponent } from './highlight/component/highlight.component'
@@ -11,8 +12,8 @@ import { FooterComponent } from './footer/footer.component'
 import { HeaderComponent } from './header/header.component'
 import { NavComponent } from './nav/nav.component'
 import { NavBrandComponent } from './nav/nav-brand.component'
-import { NavCustomComponent } from './nav/nav-custom.component'
-import { NavNavComponent } from './nav/nav-nav.component'
+import { NavItemsComponent } from './nav/nav-items.component'
+import { NavToggleComponent } from './nav/nav-toggle.component';
 import { CardComponent } from './card/card.component'
 import { LayoutComponent } from './layout/layout.component'
 
@@ -21,9 +22,10 @@ const ui = [
   HeaderComponent,
   NavComponent,
   NavBrandComponent,
-  NavCustomComponent,
-  NavNavComponent,
+  NavItemsComponent,
+  NavToggleComponent,
   BadgesComponent,
+  BadgesNavComponent,
   RibbonComponent,
   HighlightComponent,
   SanitizerPipe,

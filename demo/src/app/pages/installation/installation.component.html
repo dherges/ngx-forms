@@ -1,8 +1,8 @@
-<section class="mt-0">
+<section>
   <h2>Installation</h2>
   <p class="lead">Install with <b>npm</b></p>
   <ui-card icon="fa fa-download"
-           cardTitle="Install"
+           title="Install"
            includeCopier="true"
            (action)="handleAction({ type: 'CopyCode', payload: installCode })">
     <highlight [lang]="'ts'"
@@ -15,7 +15,7 @@
   <h2>Setup</h2>
   <p class="lead">Import <b><code>NgxFormsModule</code></b> in the root module</p>
   <ui-card icon="fa fa-code"
-           cardTitle="Code"
+           title="Code"
            includeCopier="true"
            (action)="handleAction({ type: 'CopyCode', payload: importCode })">
     <highlight [lang]="'ts'"
