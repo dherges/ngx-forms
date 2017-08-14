@@ -8,7 +8,6 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
       <h2>Field Types</h2>
       <div *ngFor="let field of fields">
         <h3 class="my-4">{{ field.name }}</h3>
-        <div class="container sub-section">
         <div class="row">
           <div class="col-md-6">
             <ui-card icon="fa fa-code" title="Code" *ngIf="field.code.code">
@@ -30,7 +29,6 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
             </ui-card>
           </div>
         </div>
-        </div>
       </div>
     </section>
   `,
@@ -38,7 +36,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 export class FieldTypesComponent {
   @Input() fields
 
-  constructor(private forms: NgxFormsService) {}
+  constructor(private forms: NgxFormsService) { }
 
   item = {}
 }

@@ -1,12 +1,13 @@
-<section class="mt-3">
+<section class="mt-0">
   <h2>Usage</h2>
   <p class="lead sub-section">
-    Ensure that you install <b><i>@ngx-plus/ngx-forms</i></b> before proceeding - details can be found on the <b><a routerLink="/installation">Installation</a></b> page.
+    Ensure that you install <b><code>@ngx-plus/ngx-forms</code></b> and import <b><code>NgxFormsModule</code></b> in your root module before proceeding. Details can be found on the <b><a routerLink="/installation">Installation</a></b> page.
   </p>
   <ul>
     <li *ngFor="let step of steps">
       <h4 [innerHtml]="step.title"></h4>
-      <p class="lead" [innerHtml]="step.description"></p>
+      <p class="lead"
+         [innerHtml]="step.description"></p>
       <ui-card [icon]="'fa fa-' + ((step.code.lang === 'ts') ? 'code' : 'html5')"
                [title]="(step.code.lang === 'ts') ? 'Code' : 'Template'"
                *ngIf="step.code.code">
@@ -18,7 +19,10 @@
     <li>
       <h4>The result is a new form</h4>
       <div class="mb-4">
-        <ngx-form [item]="item" (action)="handleAction($event)" [config]="formConfig"></ngx-form>
+        <ngx-form [item]="item"
+                  (action)="handleAction($event)"
+                  [config]="formConfig">
+        </ngx-form>
       </div>
     </li>
   </ul>

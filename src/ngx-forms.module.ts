@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core'
+import { NgModule, ModuleWithProviders } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { NgxFormlyModule } from './modules/formly/formly.module'
-
 import { NgxFormsService } from './services/ngx-forms.service'
 
 import { NgxFormComponent } from './components/ngx-form.component'
@@ -32,7 +31,7 @@ import { NgxFormHeaderComponent } from './components/ngx-form-header.component'
   ]
 })
 export class NgxFormsModule {
-  static forRoot() {
+  static forRoot(): ModuleWithProviders {
     return {
       ngModule: NgxFormsModule,
       providers: [
@@ -40,8 +39,4 @@ export class NgxFormsModule {
       ]
     }
   }
-}
-
-export {
-NgxFormsService,
 }

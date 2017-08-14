@@ -7,14 +7,14 @@
 @import '../../src/scss/styles';
 
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   padding-top: 80px;
 }
 
 .navbar-brand,
 h1,
 h2 {
-  color: $brand-primary !important;
+  color      : $brand-primary !important;
   font-weight: 400;
 }
 
@@ -24,13 +24,14 @@ h4 {
 
 .sub-section {
   background-color: rgba(25, 118, 210, .03);
-  border-left: 5px solid lighten($brand-info, 15%);
-  padding: 10px;
-  margin-bottom: 8px;
-  display: table;
-  clear: both;
-  width: 100%;
-  box-sizing: border-box;
+  border-left     : 5px solid lighten($brand-info, 10%);
+  padding         : 10px;
+  margin-bottom   : 8px;
+  margin-left     : 23px;
+  display         : table;
+  clear           : both;
+  width           : calc(100% - 23px);
+  box-sizing      : border-box;
 }
 
 code[highlight] {
@@ -39,13 +40,13 @@ code[highlight] {
 
 code[highlight],
 highlight {
-  border-radius: 0.2em;
+  border-radius   : 0.2em;
   background-color: #f5f2f0;
 }
 
 .ui-card-block {
   background-color: #f5f2f0;
-  padding: 10px;
+  padding         : 10px;
 }
 
 tabs highlight {
@@ -58,31 +59,31 @@ img {
 
 a {
   text-decoration: none;
-  color: $action-color;
+  color          : $action-color;
 }
 
 section {
-  display: block;
+  display   : block;
   // width: 100%;
   margin-top: 30px;
 
   h2 {
     &:before {
-      color: $action-color;
-      content: '\f0da';
-      font-family: "FontAwesome";
-      float: left;
+      color       : $action-color;
+      content     : '\f0da';
+      font-family : "FontAwesome";
+      float       : left;
       margin-right: 10px;
     }
 
     &:after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 100%;
-      opacity: 0.1;
+      content         : '';
+      display         : block;
+      height          : 1px;
+      width           : 100%;
+      opacity         : 0.1;
       background-color: black;
-      margin-top: 15px;
+      margin-top      : 15px;
     }
   }
 }

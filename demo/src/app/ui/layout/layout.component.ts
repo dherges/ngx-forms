@@ -4,10 +4,10 @@ import { ActivatedRoute } from '@angular/router'
 @Component({
   selector: 'ui-layout',
   template: `
-    <div class="animated fadeIn container-fluid">
-      <ui-nav [items]="items"></ui-nav>
-      <ui-header></ui-header>
-      <div class="animated slideInUp container">
+    <ui-nav [items]="items"></ui-nav>
+    <ui-header></ui-header>
+    <div class="animated slideInUp">
+      <div class="container">
         <router-outlet></router-outlet>
       </div>
       <ui-footer></ui-footer>
@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router'
 export class LayoutComponent implements OnInit {
   items = []
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.data.subscribe(d => (this.items = d['headerItems']))

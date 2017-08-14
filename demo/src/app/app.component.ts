@@ -5,11 +5,13 @@ import 'rxjs/add/operator/filter'
 @Component({
   selector: 'app-root',
   template: `
-    <router-outlet></router-outlet>
+    <div class="animated fadeIn container-fluid">
+      <router-outlet></router-outlet>
+    </div>
   `,
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.router.events

@@ -2,7 +2,9 @@ import {
   Component,
   ChangeDetectionStrategy,
   Input,
+  Output,
   OnInit,
+  EventEmitter,
 } from '@angular/core'
 import { NavigationEnd, Router } from '@angular/router'
 
@@ -12,43 +14,41 @@ import { NavigationEnd, Router } from '@angular/router'
     <button class="navbar-toggler float-right"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-label="Toggle Navigation"
+            data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-label="Toggle navigation"
             [class.collapsed]="collapsed"
-            (click)="collapsed = !collapsed">
+            [class.mt-3]="open"
+            (click)="action.emit({ type: 'ToggleNav' })">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse"
-         id="navbarSupportedContent"
-         [class.show]="!collapsed">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"
-            *ngFor="let item of items"
-            [routerLinkActiveOptions]="{ exact: true }"
-            routerLinkActive="active">
-          <a class="nav-link" [routerLink]="item.link">{{ item.name }}</a>
+    <div class="navbar-collapse collapse"
+         id="navbarTogglerDemo02"
+         [class.show]="open">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li *ngFor="let item of items"
+           class="nav-item"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link"
+             [routerLink]="item.link">{{ item.name }}
+          </a>
         </li>
       </ul>
     </div>
   `,
-  styles: [
-    `
-
-  `,
-  ],
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavNavComponent implements OnInit {
-  public collapsed = true
+  @Input() collapsed = true
+  @Input() items: any[] = []
+  @Input() open = false
+  @Output() action = new EventEmitter()
 
-  @Input() items: any[]
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.router.events.subscribe(
-      e => (e instanceof NavigationEnd ? (this.collapsed = true) : '')
-    )
+
   }
 }

@@ -12,7 +12,7 @@ export class UsageComponent {
     {
       order: 1,
       title: `Inject <b>NgxFormsService</b>`,
-      description: `The <b>NgxFormsService</b> can be used to generate the field definitions in the form config.`,
+      description: `The <b><code>NgxFormsService</code></b> can be used to generate the field definitions in the form config.`,
       code: {
         lang: 'ts',
         code: `constructor(private forms: NgxFormsService) { }`,
@@ -39,7 +39,7 @@ export class UsageComponent {
     {
       title: 'Create a method to handle <b>Form Actions</b>',
       description:
-        'This method will be triggered by the form actions (button click, etc.)',
+      'This method will be triggered by the form actions (button click, etc.)',
       code: {
         lang: 'ts',
         code: `public handleAction($event) {
@@ -96,5 +96,5 @@ export class UsageComponent {
     console.log('$event', $event)
   }
 
-  constructor(private forms: NgxFormsService) {}
+  constructor(private forms: NgxFormsService) { }
 }

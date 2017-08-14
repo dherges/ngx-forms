@@ -2,9 +2,20 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
+    "baseUrl": "./",
     "module": "es2015",
-    "baseUrl": ".",
-    "types": []
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@angular/*": [ "../node_modules/@angular/*" ],
+      "@ngx-plus/*": [ "../node_modules/@ngx-plus/*" ],
+      "@ngrx/*": [ "../node_modules/@ngrx/*" ],
+      "rxjs/*": [ "../node_modules/rxjs/*" ]
+    },
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
   },
   "exclude": [
     "test.ts",

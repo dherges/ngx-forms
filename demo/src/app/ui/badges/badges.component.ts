@@ -3,11 +3,10 @@ import { Component, ChangeDetectionStrategy } from '@angular/core'
 @Component({
   selector: 'badges',
   template: `
-    <div class="animated fadeInDownBig">
-      <a *ngFor="let badge of badges" [href]="badge.link">
-        <img [src]="badge.img" />
-      </a>
-    </div>
+    <a *ngFor="let badge of badges" [href]="badge.link">
+      <img [src]="badge.img" />
+    </a>
+    <hr>
   `,
   styles: [
     `
@@ -27,7 +26,7 @@ export class BadgesComponent {
     {
       link: 'https://www.npmjs.com/package/@ngx-plus/ngx-forms',
       img:
-        'https://img.shields.io/npm/v/@ngx-plus/ngx-forms.svg?maxAge=2592000?style=plastic',
+      'https://img.shields.io/npm/v/@ngx-plus/ngx-forms.svg?maxAge=2592000?style=plastic',
     },
     {
       link: 'https://ngx-plus.github.io/ngx-forms/',
@@ -40,7 +39,7 @@ export class BadgesComponent {
     {
       link: 'https://coveralls.io/github/ngx-plus/ngx-forms?branch=master',
       img:
-        'https://coveralls.io/repos/github/ngx-plus/ngx-forms/badge.svg?branch=master',
+      'https://coveralls.io/repos/github/ngx-plus/ngx-forms/badge.svg?branch=master',
     },
     {
       link: '#contributors',

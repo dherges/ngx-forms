@@ -15,7 +15,7 @@ import { FieldTypesComponent } from './fields/field-types.component'
 @NgModule({
   imports: [
     CommonModule,
-    NgxFormsModule.forRoot(),
+    NgxFormsModule,
     UiModule,
     PagesRoutingModule,
   ],
@@ -27,4 +27,4 @@ import { FieldTypesComponent } from './fields/field-types.component'
     FieldTypesComponent,
   ],
 })
-export class PagesModule {}
+export class PagesModule { }

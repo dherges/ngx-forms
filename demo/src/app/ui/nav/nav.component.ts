@@ -10,18 +10,16 @@ import { NavigationEnd, Router } from '@angular/router'
   selector: 'ui-nav',
   template: `
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <div class="row align-items-center w-100">
-          <div class="col-6 col-lg-3">
-            <ui-nav-brand></ui-nav-brand>
-          </div>
-          <div class="col">
-            <ui-nav-nav [items]="items"></ui-nav-nav>
-          </div>
-          <div class="col mt-1 d-none d-lg-block">
-            <ui-nav-custom></ui-nav-custom>
-            <ribbon></ribbon>
-          </div>
+      <div class="w-100" [class.container]="!open">
+        <ui-nav-brand></ui-nav-brand>
+        <ui-nav-nav [items]="items"
+                    [collapsed]="collapsed"
+                    [open]="open"
+                    (action)="handleAction($event)">
+        </ui-nav-nav>
+        <div class="d-none d-lg-flex">
+          <ui-nav-custom></ui-nav-custom>
+          <ribbon></ribbon>
         </div>
       </div>
     </nav>
@@ -40,14 +38,27 @@ import { NavigationEnd, Router } from '@angular/router'
 export class NavComponent implements OnInit {
   public collapsed = false
   public logo = 'assets/img/ngx-plus-light.svg'
+  public open = false
 
   @Input() items: any[]
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    // this.router.events.subscribe(
-    //   e => (e instanceof NavigationEnd ? (this.collapsed = false) : '')
-    // )
+    this.router.events.subscribe(
+      e => (e instanceof NavigationEnd ? (this.open = false) : '')
+    )
+  }
+
+  handleAction(event) {
+    switch (event.type) {
+      case 'ToggleNav': {
+        this.collapsed = true
+        return this.open = !this.open
+      }
+      default: {
+        return console.log('$event', event)
+      }
+    }
   }
 }

@@ -9,7 +9,7 @@ import { FormGroup } from '@angular/forms'
                        *ngIf="config.icon || config.title"
                        [icon]="config.icon" [title]="config.title" [item]="item">
       </ngx-form-header>
-      <ngx-form-fields class="card-block"
+      <ngx-form-fields class="card-body"
                        *ngIf="config.fields && config.fields.length"
                        [fields]="config.fields" [form]="form" [item]="item" (action)="handleAction($event)">
       </ngx-form-fields>

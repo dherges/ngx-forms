@@ -107,7 +107,7 @@ const clean = () => {
   hasSubDir(paths, 'node_modules').forEach(dir => {
     console.log(`[clean] Removing ${dir}...`)
     rmDirRecursive(dir)
-    console.log(`[clean] ${dir} Removed`)
+    console.log(`[clean] Removed ${dir}`)
   })
 
   paths.forEach(p => {
@@ -115,7 +115,7 @@ const clean = () => {
     if (exists(lockFile)) {
       console.log(`[clean] Removing ${lockFile}...`)
       rmFile(lockFile)
-      console.log(`[clean] ${lockFile} Removed`)
+      console.log(`[clean] Removed ${lockFile}`)
     }
   })
 

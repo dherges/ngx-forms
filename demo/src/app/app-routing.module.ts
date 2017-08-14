@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
-const routes: Routes = [{ path: '', loadChildren: './pages/pages.module#PagesModule' }]
+import { AppComponent } from './app.component'
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AppComponent,
+    children: [
+      { path: '', loadChildren: './pages/pages.module#PagesModule' }
+    ]
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: false, useHash: true })],

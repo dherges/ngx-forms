@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { QuillEditorComponent } from './quill-editor.component';
+import { NgxQuillEditorComponent } from './quill-editor.component';
 
 @NgModule({
   declarations: [
-    QuillEditorComponent
+    NgxQuillEditorComponent
   ],
   imports: [],
-  exports: [QuillEditorComponent],
+  exports: [NgxQuillEditorComponent],
   providers: []
 })
 export class QuillModule { }

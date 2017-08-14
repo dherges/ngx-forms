@@ -1,33 +1,21 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "lib": [
+      "es2016",	
       "es2017",
       "dom"
     ],
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "noImplicitAny": false,
     "experimentalDecorators": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "noEmitOnError": false,
     "typeRoots": [
       "node_modules/@types"
-    ]
-  },
-  "paths": {
-    "@angular/*": [
-      "./node_modules/@angular/*"
-    ],
-    "ng-formly/*": [
-      "./node_modules/ng-formly/*"
-    ],
-    "rxjs/*": [
-      "./node_modules/rxjs/*"
     ]
   },
   "files": [
