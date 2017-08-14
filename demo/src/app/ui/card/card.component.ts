@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core'
 
 @Component({
   selector: 'ui-card',
@@ -9,6 +9,9 @@ import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
           <i class="{{icon}}" aria-hidden="true"></i>
           {{title}}
         </div>
+        <button *ngIf="includeCopier" class="btn btn-sm btn-secondary ml-auto" (click)="action.emit({ type: 'CopyCode' })">
+          <i class="fa fa-fw fa-clone"></i>
+        </button>
       </div>
       <ng-content></ng-content>
     </div>
@@ -17,31 +20,36 @@ import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 })
 export class CardComponent {
 
-  @Input() title: string;
-  @Input() icon: string;
-
+  @Input() title: string
+  @Input() icon: string
+  @Input() includeCopier: boolean = false
   @Input() set cardTitle(title) {
     switch (title.toLowerCase()) {
+      case 'code':
+        this.title = title
+        this.includeCopier = true
+        break
       case 'template':
-        this.title = `<i class="fa fa-html5" aria-hidden="true"></i> ${title}`;
-        break;
+        this.title = title
+        this.includeCopier = true
+        break
       case 'style':
-        this.title = `<i class="fa fa-css3" aria-hidden="true"></i> ${title}`;
-        break;
+        this.title = title
+        break
       case 'buttons':
-        this.title = `<i class="fa fa-share-square-o" aria-hidden="true"></i> ${title}`;
-        break;
+        this.title = title
+        break
       case 'link args':
-        this.title = `<i class="fa fa-external-link" aria-hidden="true"></i> ${title}`;
-        break;
+        this.title = title
+        break
       case 'options':
-        this.title = `<i class="fa fa-cog" aria-hidden="true"></i> ${title}`;
-        break;
+        this.title = title
+        break
       default:
-        this.title = `<i class="fa fa-code" aria-hidden="true"></i> ${title}`;
+        this.title = title
     }
   }
-
-  @Input() active = false;
+  @Input() active = false
+  @Output() action = new EventEmitter()
 
 }

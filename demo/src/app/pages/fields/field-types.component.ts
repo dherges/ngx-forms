@@ -10,19 +10,19 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
         <h3 class="my-4">{{ field.name }}</h3>
         <div class="row">
           <div class="col-md-6">
-            <ui-card icon="fa fa-code" title="Code" *ngIf="field.code.code">
+            <ui-card icon="fa fa-code" cardTitle="Code" *ngIf="field.code.code">
               <highlight lang="ts"
                          [code]="field.code.code">
               </highlight>
             </ui-card>
-            <ui-card icon="fa fa-html5" title="Template" *ngIf="field.code.template">
+            <ui-card icon="fa fa-html5" cardTitle="Template" *ngIf="field.code.template">
               <highlight lang="html"
                          [code]="field.code.template">
               </highlight>
             </ui-card>
           </div>
           <div class="col-md-6">
-            <ui-card icon="fa fa-chevron-right" title="Output">
+            <ui-card icon="fa fa-chevron-right" cardTitle="Output">
               <div class="ui-card-block">
                 <ngx-form-fields [fields]="field.formConfig.fields"></ngx-form-fields>
               </div>

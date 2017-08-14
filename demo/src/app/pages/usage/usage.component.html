@@ -9,7 +9,7 @@
       <p class="lead"
          [innerHtml]="step.description"></p>
       <ui-card [icon]="'fa fa-' + ((step.code.lang === 'ts') ? 'code' : 'html5')"
-               [title]="(step.code.lang === 'ts') ? 'Code' : 'Template'"
+               [cardTitle]="(step.code.lang === 'ts') ? 'Code' : 'Template'"
                *ngIf="step.code.code">
         <highlight [lang]="step.code.lang"
                    [code]="step.code.code">

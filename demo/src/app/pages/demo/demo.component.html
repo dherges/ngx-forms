@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-6">
       <ui-card [icon]="config.icon"
-               [title]="config.title">
+               [cardTitle]="config.title">
         <div class="ui-card-block">
           <ngx-form-fields [fields]="config.fields"
                            [item]="item"
@@ -22,21 +22,22 @@
     </div>
     <div class="col-md-6">
       <ui-card icon="fa fa-fw fa-html5"
-               title="Template">
+               cardTitle="Template">
         <highlight lang="html"
                    [code]="templateString"></highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-code"
-               title="Form Configuration">
+               cardTitle="Form Configuration"
+               includeCopier="true">
         <highlight lang="ts"
                    [code]="configString"></highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-database"
-               title="Data">
+               cardTitle="Data">
         <pre class="ui-card-block">{{ item | json }}</pre>
       </ui-card>
       <ui-card icon="fa fa-fw fa-random"
-               title="Result">
+               cardTitle="Result">
         <pre class="ui-card-block">{{ result | json }}</pre>
       </ui-card>
     </div>

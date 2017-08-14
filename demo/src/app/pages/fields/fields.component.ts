@@ -7,7 +7,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
     <section class="mt-0">
       <h2>Fields</h2>
       <p class="lead">The <b>NgxFormsService</b> can be used to generate field definitions that can be used to populate the <u><i>fields</i></u> array in your form config</p>
-      <ui-card icon="fa fa-code" title="Code">
+      <ui-card icon="fa fa-code" cardTitle="Code">
         <highlight lang="ts" [code]="exampleConfig"></highlight>
       </ui-card>
     </section>
