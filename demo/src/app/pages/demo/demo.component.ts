@@ -128,7 +128,7 @@ export class DemoComponent {
           (action)="handleAction($event)">
 </ngx-form>`
 
-  constructor(private forms: NgxFormsService) {}
+  constructor(private forms: NgxFormsService) { }
 
   handleAction($event) {
     this.result = $event
