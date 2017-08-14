@@ -19,7 +19,6 @@ import { FormGroup } from '@angular/forms'
       </ngx-form-buttons>
     </form>
   `,
-  styleUrls: ['../scss/styles.scss']
 })
 export class NgxFormComponent {
   @Input() form: FormGroup = new FormGroup({})

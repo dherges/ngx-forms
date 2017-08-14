@@ -11,7 +11,6 @@ import { FieldType } from 'ng-formly'
                   [modules]="toolbar">
     </ngx-quill-editor>
   `,
-  styleUrls: ['../../../scss/styles.scss']
 })
 export class FormlyFieldWysiwygComponent extends FieldType implements OnInit {
 

@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@ngx-plus/ngx-forms/src/scss/styles';
 @import '~animate.css';
 @import '~prismjs/themes/prism';
 @import '~font-awesome/css/font-awesome.min.css';
 @import './assets/style/variables';
 @import '~bootstrap/scss/bootstrap';
-@import '../../src/scss/styles';
 
 body {
   // overflow-x: hidden;
