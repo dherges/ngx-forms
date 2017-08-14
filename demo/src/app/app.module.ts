@@ -6,6 +6,8 @@ import { NgxFormsModule } from '@ngx-plus/ngx-forms'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 
+import { CopierService } from './services/copier.service'
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -13,6 +15,7 @@ import { AppComponent } from './app.component'
     AppRoutingModule,
   ],
   declarations: [AppComponent],
+  providers: [CopierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

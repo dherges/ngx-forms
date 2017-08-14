@@ -1,6 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
+import { CopierService } from '../../services/copier.service'
+
 @Component({
   selector: 'usage',
   templateUrl: './usage.component.html',
@@ -92,9 +94,19 @@ export class UsageComponent {
     ],
   }
 
-  public handleAction($event) {
-    console.log('$event', $event)
+  public handleAction(event) {
+    switch (event.type) {
+      case 'CopyCode': {
+        return this.copier.copyText(event.payload)
+      }
+      default: {
+        return console.log('$event', event)
+      }
+    }
   }
 
-  constructor(private forms: NgxFormsService) { }
+  constructor(
+    private forms: NgxFormsService,
+    private copier: CopierService,
+  ) { }
 }

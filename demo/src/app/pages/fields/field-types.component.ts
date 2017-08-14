@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
@@ -10,12 +10,18 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
         <h3 class="my-4">{{ field.name }}</h3>
         <div class="row">
           <div class="col-md-6">
-            <ui-card icon="fa fa-code" cardTitle="Code" *ngIf="field.code.code">
+            <ui-card *ngIf="field.code.code"
+                     icon="fa fa-code"
+                     cardTitle="Code"
+                     (action)="action.emit({ type: 'CopyCode', payload: field.code.code })">
               <highlight lang="ts"
                          [code]="field.code.code">
               </highlight>
             </ui-card>
-            <ui-card icon="fa fa-html5" cardTitle="Template" *ngIf="field.code.template">
+            <ui-card *ngIf="field.code.template"
+                     icon="fa fa-html5"
+                     cardTitle="Template"
+                     (action)="action.emit({ type: 'CopyCode', payload: field.code.template })">
               <highlight lang="html"
                          [code]="field.code.template">
               </highlight>
@@ -35,6 +41,7 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 })
 export class FieldTypesComponent {
   @Input() fields
+  @Output() action = new EventEmitter()
 
   constructor(private forms: NgxFormsService) { }
 

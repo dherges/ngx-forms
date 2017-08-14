@@ -1,6 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
+import { CopierService } from '../../services/copier.service'
+
 @Component({
   selector: 'demo',
   templateUrl: './demo.component.html',
@@ -62,13 +64,13 @@ export class DemoComponent {
         label: 'Save',
         type: 'submit',
         classNames: 'btn-primary',
-        click: { type: 'submit' },
+        click: { type: 'Submit' },
       },
       {
         label: 'Cancel',
         type: 'button',
         classNames: 'btn-secondary',
-        click: { type: 'cancel' },
+        click: { type: 'Cancel' },
       },
     ],
   }
@@ -128,9 +130,23 @@ export class DemoComponent {
           (action)="handleAction($event)">
 </ngx-form>`
 
-  constructor(private forms: NgxFormsService) { }
+  constructor(
+    private forms: NgxFormsService,
+    private copier: CopierService
+  ) { }
 
-  handleAction($event) {
-    this.result = $event
+  handleAction(event) {
+    switch (event.type) {
+      case 'CopyCode': {
+        return this.copier.copyText(event.payload)
+      }
+      case 'Submit':
+      case 'Cancel': {
+        return this.result = event
+      }
+      default: {
+        return console.log('$event', event)
+      }
+    }
   }
 }

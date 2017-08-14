@@ -1,21 +1,44 @@
 import { Component } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
+import { CopierService } from '../../services/copier.service'
+
 @Component({
   selector: 'fields',
   template: `
     <section class="mt-0">
       <h2>Fields</h2>
-      <p class="lead">The <b>NgxFormsService</b> can be used to generate field definitions that can be used to populate the <u><i>fields</i></u> array in your form config</p>
-      <ui-card icon="fa fa-code" cardTitle="Code">
-        <highlight lang="ts" [code]="exampleConfig"></highlight>
+      <p class="lead">The <b>NgxFormsService</b> can be used to generate field definitions that can be used to populate the
+      <u><i>fields</i></u> array in your formConfig</p>
+      <ui-card icon="fa fa-code"
+               cardTitle="Code"
+               (action)="handleAction({ type: 'CopyCode', payload: exampleConfig })">
+        <highlight lang="ts"
+                   [code]="exampleConfig">
+        </highlight>
       </ui-card>
     </section>
-    <field-types [fields]="fields"></field-types>
+    <field-types [fields]="fields"
+                 (action)="handleAction($event)">
+    </field-types>
   `,
 })
 export class FieldsComponent {
-  constructor(private forms: NgxFormsService) { }
+  constructor(
+    private forms: NgxFormsService,
+    private copier: CopierService,
+  ) { }
+
+  handleAction(event) {
+    switch (event.type) {
+      case 'CopyCode': {
+        return this.copier.copyText(event.payload)
+      }
+      default: {
+        return console.log('$event', event)
+      }
+    }
+  }
 
   exampleConfig = `formConfig: {
   fields: [

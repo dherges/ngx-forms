@@ -22,15 +22,20 @@
     </div>
     <div class="col-md-6">
       <ui-card icon="fa fa-fw fa-html5"
-               cardTitle="Template">
+               cardTitle="Template"
+               includeCopier="true"
+               (action)="handleAction({ type: 'CopyCode', payload: templateString })">
         <highlight lang="html"
-                   [code]="templateString"></highlight>
+                   [code]="templateString">
+        </highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-code"
                cardTitle="Form Configuration"
-               includeCopier="true">
+               includeCopier="true"
+               (action)="handleAction({ type: 'CopyCode', payload: configString })">
         <highlight lang="ts"
-                   [code]="configString"></highlight>
+                   [code]="configString">
+        </highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-database"
                cardTitle="Data">
