@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { NgxFormConfig } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'demo',
@@ -17,7 +18,7 @@ export class DemoComponent {
 
   result = {}
 
-  config = {
+  config: NgxFormConfig = {
     title: 'Ngx-Forms',
     icon: 'fa fa-fw fa-tasks',
     fields: {

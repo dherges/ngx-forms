@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { NgxFormConfig } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'usage',
@@ -7,10 +8,17 @@ import { Component } from '@angular/core'
 export class UsageComponent {
   steps = [
     {
+      title: 'Import the <b>NgxFormConfig</b> interface',
+      code: {
+        lang: 'ts',
+        code: `import { NgxFormConfig } from '@ngx-plus/ngx-forms'`,
+      },
+    },
+    {
       title: `Define the <b>Form Configuration</b>`,
       code: {
         lang: 'ts',
-        code: `public formConfig = {
+        code: `public formConfig: NgxFormConfig = {
   title: 'My Form',
   fields: {
     name: 'input',
@@ -53,7 +61,7 @@ export class UsageComponent {
 
   item: any = {}
 
-  formConfig = {
+  formConfig: NgxFormConfig = {
     title: 'My Form',
     fields: {
       name: 'input',

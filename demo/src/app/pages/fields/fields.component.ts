@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { NgxFormConfig } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'fields',
