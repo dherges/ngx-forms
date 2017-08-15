@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms'
                        [icon]="config.icon" [title]="config.title" [item]="item">
       </ngx-form-header>
       <ngx-form-fields class="card-body"
-                       *ngIf="config.fields && config.fields.length"
+                       *ngIf="config.fields"
                        [fields]="config.fields" [form]="form" [item]="item" (action)="handleAction($event)">
       </ngx-form-fields>
       <ngx-form-buttons class="card-footer"
