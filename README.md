@@ -34,7 +34,7 @@
 
 > <https://ngx-plus.github.io/ngx-forms/>
 
-## Contributing / Development
+## Development / Contributing
 
 ### Global Install
 
