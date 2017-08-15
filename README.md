@@ -38,46 +38,46 @@
 
 ### Global Install
 
-```sh
-> npm install -g lerna @angular/cli
+```console
+npm install -g lerna @angular/cli
 ```
 
 ### Clone Repo
 
-```sh
-> git clone https://github.com/ngx-plus/ngx-forms.git
+```console
+git clone https://github.com/ngx-plus/ngx-forms.git
 ```
 
 ### Local Install
 
 > `cd ngx-forms` and install project dependencies
 
-```sh
-> npm install
+```console
+npm install
 ```
 
 ### Lerna Bootstrap
 
 > This will bootstrap the packages in the ngx-forms repo, installing all of their dependencies and linking any cross-dependencies.  After running this command, the demo will use the local version of ngx-forms for development.
 
-```sh
-> lerna bootstrap
+```console
+lerna bootstrap
 ```
 
 ### Watch Mode
 
 > This will watch the ngx-forms files and rebuild on changes.
 
-```sh
-> npm run watch
+```console
+npm run watch
 ```
 
-> Dev Mode
+### Dev Mode
 
-This will fire up a live-reload dev server for the demo.
+> This will fire up a live-reload dev server for the demo.
 
-```sh
-> npm run dev
+```console
+npm run dev
 ```
 
 ## Contributors
