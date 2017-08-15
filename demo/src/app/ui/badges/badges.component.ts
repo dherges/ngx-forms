@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'badges',
@@ -6,16 +6,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core'
     <a *ngFor="let badge of badges" [href]="badge.link">
       <img [src]="badge.img" />
     </a>
-    <hr>
   `,
-  styles: [
-    `
+  styles: [`
     a {
       text-decoration: none;
     }
-    `,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  `],
 })
 export class BadgesComponent {
   public badges = [

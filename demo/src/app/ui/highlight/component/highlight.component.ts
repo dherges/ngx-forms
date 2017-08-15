@@ -1,10 +1,4 @@
-import {
-  Component,
-  AfterContentInit,
-  Input,
-  ChangeDetectionStrategy,
-  SimpleChanges
-} from '@angular/core';
+import { Component, AfterContentInit, Input } from '@angular/core';
 
 import 'prismjs/prism';
 import 'prismjs/components/prism-typescript';
@@ -18,7 +12,6 @@ declare const Prism: any;
   selector: 'highlight',
   template: `<pre><code [innerHtml]="codeString | sanitizeHtml"></code></pre>`,
   styleUrls: ['highlight.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HighlightComponent implements AfterContentInit {
 

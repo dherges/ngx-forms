@@ -1,13 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core'
+import { Component } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
-
-import { CopierService } from '../../services/copier.service'
 
 @Component({
   selector: 'usage',
   templateUrl: './usage.component.html',
   styleUrls: ['./usage.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UsageComponent {
   steps = [
@@ -61,8 +58,8 @@ export class UsageComponent {
       code: {
         lang: 'html',
         code: `<ngx-form [config]="formConfig"
-          [item]="item"
-          (action)="handleAction($event)">
+  [item]="item"
+  (action)="handleAction($event)">
 </ngx-form>`,
       },
     },
@@ -94,19 +91,7 @@ export class UsageComponent {
     ],
   }
 
-  public handleAction(event) {
-    switch (event.type) {
-      case 'CopyCode': {
-        return this.copier.copyText(event.payload)
-      }
-      default: {
-        return console.log('$event', event)
-      }
-    }
-  }
-
   constructor(
     private forms: NgxFormsService,
-    private copier: CopierService,
   ) { }
 }

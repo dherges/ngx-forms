@@ -29,16 +29,14 @@
     <div class="col-md-6">
       <ui-card icon="fa fa-fw fa-html5"
                title="Template"
-               includeCopier="true"
-               (action)="handleAction({ type: 'CopyCode', payload: templateString })">
+                [copy]="templateString">
         <highlight lang="html"
                    [code]="templateString">
         </highlight>
       </ui-card>
       <ui-card icon="fa fa-fw fa-code"
                title="Form Configuration"
-               includeCopier="true"
-               (action)="handleAction({ type: 'CopyCode', payload: configString })">
+                [copy]="configString">
         <highlight lang="ts"
                    [code]="configString">
         </highlight>

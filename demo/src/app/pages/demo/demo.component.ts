@@ -1,13 +1,10 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core'
+import { Component } from '@angular/core'
 import { NgxFormsService } from '@ngx-plus/ngx-forms'
-
-import { CopierService } from '../../services/copier.service'
 
 @Component({
   selector: 'demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DemoComponent {
   item = {
@@ -132,14 +129,10 @@ export class DemoComponent {
 
   constructor(
     private forms: NgxFormsService,
-    private copier: CopierService
   ) { }
 
   handleAction(event) {
     switch (event.type) {
-      case 'CopyCode': {
-        return this.copier.copyText(event.payload)
-      }
       case 'Submit':
       case 'Cancel': {
         return this.result = event

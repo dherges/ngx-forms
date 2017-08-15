@@ -60,6 +60,7 @@ export class CopierService {
     } catch (err) {
       return false;
     } finally {
+      console.log('copyText', text)
       this.removeFake();
     }
   }
