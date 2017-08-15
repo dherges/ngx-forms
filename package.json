@@ -39,7 +39,7 @@
     "dev": "cd demo && npm start",
     "docs": "./node_modules/.bin/compodoc -p ./tsconfig.json -s",
     "preghpages": "cd demo && ng build --prod --progress=false --base-href https://ngx-plus.github.io/ngx-forms/",
-    "ghpages": "cd demo && npx ngh angular-cli-ghpages --no-silent --repo=git@github.com:ngx-plus/ngx-forms.git",
+    "ghpages": "cd demo && npx ngh --no-silent --repo=git@github.com:ngx-plus/ngx-forms.git",
     "start": "npm run build",
     "test": "gulp test",
     "update": "ncu -a && cd demo && ncu -a",
