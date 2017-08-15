@@ -1,13 +1,16 @@
 import { Component } from '@angular/core'
-import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'fields',
   template: `
     <section>
-      <h2>Fields</h2>
-      <p class="lead">The <b>NgxFormsService</b> can be used to generate field definitions that can be used to populate the
-      <u><i>fields</i></u> array in your formConfig</p>
+      <h2>Field types</h2>
+      <p class="lead">
+        The <code>fields</code> object in your formConfig is used to define the fields of the form.
+        The key is the name of the field and it's value is the fields definition. 
+        To render a default field you can use the string representation as a value.
+        If you want to add in options you can use a configuration object.
+      </p>
       <ui-card icon="fa fa-code"
                title="Code"
                [copy]="exampleConfig">
@@ -20,17 +23,17 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
   `,
 })
 export class FieldsComponent {
-  constructor(
-    private forms: NgxFormsService,
-  ) { }
-
   exampleConfig = `formConfig: {
-  fields: [
-    this.forms.input('name', {
-      label: 'Name',
-      placeholder: 'Please enter your name',
-    }),
-  ]
+  // buttons: [], icon: '', title: ''
+  fields: {
+    // Field with options
+    name: {
+      type: 'input',
+      placeholder: 'Enter your name',
+    },
+    // Default field
+    email: 'email',
+  },
 }`
 
   item = {}
@@ -39,126 +42,168 @@ export class FieldsComponent {
     {
       name: 'input',
       code: {
-        code: `this.forms.input('input', {
-  label: 'My Input',
-  placeholder: 'My Input',
-})`,
+        code: `fields: {
+  inputDefault: 'input',
+  inputOptions: {
+    type: 'input',
+    label: 'My Input Options',
+    placeholder: 'My Input Options',
+  },
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.input('input', {
-            label: 'My Input',
-            placeholder: 'My Input',
-          }),
-        ],
+        fields: {
+          inputDefault: 'input',
+          inputOptions: {
+            type: 'input',
+            label: 'My Input Options',
+            placeholder: 'My Input Options',
+          },
+        },
       },
     },
     {
       name: 'email',
       code: {
-        code: `this.forms.email('emailField', {
-  label: 'My Email',
-  placeholder: 'My Email',
-})`,
+        code: `fields: {
+  emailDefault: 'email',
+  emailOptions: {
+    type: 'email',
+    label: 'My Email Options',
+    placeholder: 'My Email Options',
+  },
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.email('emailField', {
-            label: 'My Email',
-            placeholder: 'My Email',
-          }),
-        ],
+        fields: {
+          emailDefault: 'email',
+          emailOptions: {
+            type: 'email',
+            label: 'My Email Options',
+            placeholder: 'My Email Options',
+          },
+        },
       },
     },
     {
       name: 'password',
       code: {
-        code: `this.forms.password('passwordField', {
-  label: 'My Password',
-  placeholder: 'My Password',
-})`,
+        code: `fields: {
+  passwordDefault: 'password',
+  passwordOptions: {
+    type: 'password',
+    label: 'My Password Options',
+    placeholder: 'My Password Options',
+  }
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.password('passwordField', {
-            label: 'My Password',
-            placeholder: 'My Password',
-          }),
-        ],
+        fields: {
+          passwordDefault: 'password',
+          passwordOptions: {
+            type: 'password',
+            label: 'My Password Options',
+            placeholder: 'My Password Options',
+          }
+        },
       },
     },
     {
       name: 'date',
       code: {
-        code: `this.forms.date('dateField', {
-  label: 'My Date',
-})`,
+        code: `fields: {
+  dateDefault: 'date',
+  dateOptions: {
+    type: 'date',
+    label: 'My Date Options',
+  },
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.date('dateField', {
-            label: 'My Date',
-          }),
-        ],
+        fields: {
+          dateDefault: 'date',
+          dateOptions: {
+            type: 'date',
+            label: 'My Date Options',
+          },
+        }
       },
     },
     {
       name: 'textarea',
       code: {
-        code: `this.forms.textarea('textareaField', {
-  label: 'My Textarea',
-  placeholder: 'My Textarea',
-})`,
+        code: `fields: {
+  textareaDefault: 'textarea',
+  textareaOptions: {
+    type: 'textarea',
+    label: 'My Textarea Options',
+    placeholder: 'My Textarea Options',
+  },
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.textarea('textareaField', {
-            label: 'My Textarea',
-            placeholder: 'My Textarea',
-          }),
-        ],
+        fields: {
+          textareaDefault: 'textarea',
+          textareaOptions: {
+            type: 'textarea',
+            label: 'My Textarea Options',
+            placeholder: 'My Textarea Options',
+          },
+        },
       },
     },
     {
       name: 'wysiwyg',
       code: {
-        code: `this.forms.wysiwyg('wysiwygField', {
-  label: 'My Wysiwyg',
-  placeholder: 'My Wysiwyg',
-})`,
+        code: `fields: {
+  wysiwygDefault: 'wysiwyg',
+  wysiwygOptions: {
+    type: 'wysiwyg',
+    label: 'My Wysiwyg',
+    placeholder: 'My Wysiwyg',
+  },
+`,
       },
       formConfig: {
-        fields: [
-          this.forms.wysiwyg('wysiwygField', {
+        fields: {
+          wysiwygDefault: 'wysiwyg',
+          wysiwygOptions: {
+            type: 'wysiwyg',
             label: 'My Wysiwyg',
             placeholder: 'My Wysiwyg',
-          }),
-        ],
+          },
+        },
       },
     },
     {
       name: 'select',
       code: {
-        code: `this.forms.select('selectField', {
-  label: 'My Select',
-  options: [
-    { label: 1, value: 1 },
-    { label: 2, value: 2 },
-    { label: 3, value: 3 },
-  ]
-})`,
+        code: `fields: {
+  selectDefault: 'select',
+  selectOptions: {
+    type: 'select',
+    label: 'My Select',
+    options: [
+      { label: 1, value: 1 },
+      { label: 2, value: 2 },
+      { label: 3, value: 3 },
+    ],
+  },
+}`,
       },
       formConfig: {
-        fields: [
-          this.forms.select('selectField', {
+        fields: {
+          selectDefault: 'select',
+          selectOptions: {
+            type: 'select',
             label: 'My Select',
             options: [
               { label: 1, value: 1 },
               { label: 2, value: 2 },
               { label: 3, value: 3 },
             ],
-          }),
-        ],
+          },
+        },
       },
     },
   ]

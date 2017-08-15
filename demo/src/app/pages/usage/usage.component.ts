@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'usage',
@@ -8,29 +7,17 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 export class UsageComponent {
   steps = [
     {
-      order: 1,
-      title: `Inject <b>NgxFormsService</b>`,
-      description: `The <b><code>NgxFormsService</code></b> can be used to generate the field definitions in the form config.`,
-      code: {
-        lang: 'ts',
-        code: `constructor(private forms: NgxFormsService) { }`,
-      },
-    },
-    {
       title: `Define the <b>Form Configuration</b>`,
       code: {
         lang: 'ts',
         code: `public formConfig = {
   title: 'My Form',
+  fields: {
+    name: 'input',
+  },
   buttons: [
     { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
   ],
-  fields: [
-    this.forms.input('input', {
-      label: 'Input',
-      placeholder: 'Input',
-    }),
-  ]
 }`,
       },
     },
@@ -68,33 +55,15 @@ export class UsageComponent {
 
   formConfig = {
     title: 'My Form',
+    fields: {
+      name: 'input',
+    },
     buttons: [
-      {
-        label: 'Save',
-        type: 'submit',
-        classNames: 'btn-primary',
-        click: { type: 'submit' },
-      },
-      {
-        label: 'Cancel',
-        type: 'button',
-        classNames: 'btn-secondary',
-        click: { type: 'cancel' },
-      },
-    ],
-    fields: [
-      this.forms.input('input', {
-        label: 'Input',
-        placeholder: 'Input',
-      }),
+      { label: 'Save', type: 'submit', classNames: 'btn-primary', click: { type: 'submit' }},
     ],
   }
 
   public handleAction(event) {
     return console.log('$event', event)
   }
-
-  constructor(
-    private forms: NgxFormsService,
-  ) { }
 }

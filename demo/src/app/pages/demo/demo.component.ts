@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { NgxFormsService } from '@ngx-plus/ngx-forms'
 
 @Component({
   selector: 'demo',
@@ -21,40 +20,22 @@ export class DemoComponent {
   config = {
     title: 'Ngx-Forms',
     icon: 'fa fa-fw fa-tasks',
-    fields: [
-      this.forms.input('input', {
-        label: 'Input',
-        placeholder: 'Input',
-      }),
-      this.forms.email('email', {
-        label: 'Email',
-        placeholder: 'Email',
-      }),
-      this.forms.password('password', {
-        label: 'Password',
-        placeholder: 'Password',
-      }),
-      this.forms.date('date', {
-        label: 'Date',
-        placeholder: 'Date',
-      }),
-      this.forms.textarea('textarea', {
-        label: 'Textarea',
-        placeholder: 'Textarea',
-      }),
-      this.forms.wysiwyg('wysiwyg', {
-        label: 'Wysiwyg',
-        placeholder: 'Wysiwyg',
-      }),
-      this.forms.select('select', {
-        label: 'Select',
+    fields: {
+      input: 'input',
+      password: 'password',
+      email: 'email',
+      date: 'date',
+      textarea: 'textarea',
+      wysiwyg: 'wysiwyg',
+      select: {
+        type: 'select',
         options: [
           { label: 1, value: 1 },
           { label: 2, value: 2 },
           { label: 3, value: 3 },
         ],
-      }),
-    ],
+      },
+    },
     buttons: [
       {
         label: 'Save',
@@ -72,63 +53,43 @@ export class DemoComponent {
   }
 
   configString = `  formConfig = {
-      title: 'Ngx-Forms',
-      icon: 'fa fa-tasks',
-      fields: [
-        this.forms.input('input', {
-          label: 'Input',
-          placeholder: 'Input',
-        }),
-        this.forms.email('email', {
-          label: 'Email',
-          placeholder: 'Email',
-        }),
-        this.forms.password('password', {
-          label: 'Password',
-          placeholder: 'Password',
-        }),
-        this.forms.date('date', {
-          label: 'Date',
-          placeholder: 'Date',
-        }),
-        this.forms.textarea('textarea', {
-          label: 'Textarea',
-          placeholder: 'Textarea',
-        }),
-        this.forms.wysiwyg('wysiwyg', {
-          label: 'Wysiwyg',
-          placeholder: 'Wysiwyg',
-        }),
-        this.forms.select('select', {
-          label: 'Select',
-          options: [
-            { label: 1, value: 1 },
-            { label: 2, value: 2 },
-            { label: 3, value: 3 },
-          ]
-        }),
+  title: 'Ngx-Forms',
+  icon: 'fa fa-tasks',
+  fields: {
+    input: 'input',
+    password: 'password',
+    email: 'email',
+    date: 'date',
+    textarea: 'textarea',
+    wysiwyg: 'wysiwyg',
+    select: {
+      type: 'select',
+      options: [
+        { label: 1, value: 1 },
+        { label: 2, value: 2 },
+        { label: 3, value: 3 },
       ],
-      buttons: [{
-        label: 'Save',
-        type: 'submit',
-        classNames: 'btn-primary',
-        click: { type: 'submit' },
-      }, {
-        label: 'Cancel',
-        type: 'button',
-        classNames: 'btn-secondary',
-        click: { type: 'cancel' },
-      } ],
-    }`
+    },
+  },
+  buttons: [{
+    label: 'Save',
+    type: 'submit',
+    classNames: 'btn-primary',
+    click: { type: 'submit' },
+  }, {
+    label: 'Cancel',
+    type: 'button',
+    classNames: 'btn-secondary',
+    click: { type: 'cancel' },
+  } ],
+}`
 
   templateString = `<ngx-form [config]="formConfig"
           [item]="item"
           (action)="handleAction($event)">
 </ngx-form>`
 
-  constructor(
-    private forms: NgxFormsService,
-  ) { }
+  constructor() { }
 
   handleAction(event) {
     switch (event.type) {
