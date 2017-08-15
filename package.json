@@ -40,6 +40,8 @@
     "docs": "npx compodoc -p ./tsconfig.json -s",
     "preghpages": "cd demo && ng build --prod --base-href 'ngx-forms'",
     "ghpages": "cd demo && npx angular-cli-ghpages --no-silent --repo='https://GH_TOKEN@github.com/ngx-plus/ngx-forms.git' --name='obrera' --email='no-reply@example.org'",
+    "now-build": "npm run build:demo",
+    "now-start": "npx serve demo/dist",
     "start": "npm run build",
     "test": "npx gulp test",
     "update": "ncu -a && cd demo && ncu -a",
