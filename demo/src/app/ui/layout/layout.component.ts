@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router'
   selector: 'ui-layout',
   template: `
     <ui-nav [items]="items">
-      <ribbon></ribbon>
+      <ribbon class="d-none d-lg-flex"></ribbon>
       <badges-nav class="float-right text-nowrap"></badges-nav>
     </ui-nav>
     <div class="container">
