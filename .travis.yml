@@ -28,6 +28,13 @@ script:
 
 after_success: gulp coveralls
 
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npm run ghpages
+    on:
+      branch: master
+
 cache:
   directories:
     - node_modules
