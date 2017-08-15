@@ -4,7 +4,6 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 @Component({
   selector: 'demo',
   templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.scss'],
 })
 export class DemoComponent {
   item = {

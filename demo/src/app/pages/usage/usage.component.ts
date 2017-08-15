@@ -4,7 +4,6 @@ import { NgxFormsService } from '@ngx-plus/ngx-forms'
 @Component({
   selector: 'usage',
   templateUrl: './usage.component.html',
-  styleUrls: ['./usage.component.scss'],
 })
 export class UsageComponent {
   steps = [
