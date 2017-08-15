@@ -21,6 +21,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'inputKey',
         type: 'input',
         templateOptions: {
+          options: [ ],
           type: 'text',
           label: 'Input',
           placeholder: 'Input',
@@ -37,6 +38,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'emailKey',
         type: 'input',
         templateOptions: {
+          options: [ ],
           type: 'email',
           label: 'Email',
           placeholder: 'Email',
@@ -53,6 +55,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'passwordKey',
         type: 'input',
         templateOptions: {
+          options: [ ],
           type: 'password',
           label: 'Password',
           placeholder: 'Password',
@@ -69,6 +72,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'dateKey',
         type: 'input',
         templateOptions: {
+          options: [ ],
           type: 'date',
           label: 'Date',
           placeholder: 'Date',
@@ -85,6 +89,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'textareaKey',
         type: 'textarea',
         templateOptions: {
+          options: [ ],
           type: 'text',
           label: 'Text Area',
           placeholder: 'Text Area',
@@ -101,6 +106,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'wysiwygKey',
         type: 'wysiwyg',
         templateOptions: {
+          options: [ ],
           type: 'text',
           label: 'Wysiwyg',
           placeholder: 'Wysiwyg',
@@ -117,6 +123,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'selectKey',
         type: 'select',
         templateOptions: {
+          options: [ ],
           type: 'text',
           label: 'Select',
           placeholder: 'Select',
@@ -133,6 +140,7 @@ describe('Service: Form, Angular Tests', () => {
         key: 'selectKey',
         type: 'select',
         templateOptions: {
+          options: [ ],
           type: 'text',
           label: 'Select',
           placeholder: 'Select',
@@ -141,5 +149,39 @@ describe('Service: Form, Angular Tests', () => {
       }
       const field = service.field('select', 'text', 'selectKey', { placeholder: 'Select', label: 'Select' })
       expect(field).toEqual(expected)
+    }))
+
+  it('use parseFields to create an array of fields...',
+    inject([NgxFormsService], (service: NgxFormsService) => {
+      const expected = [{
+        key: 'name',
+        type: 'input',
+        templateOptions: {
+          type: 'text',
+          label: 'Name',
+          options: [],
+          placeholder: 'Enter your name'
+        },
+        className: ''
+      }, {
+        key: 'email',
+        type: 'input',
+        templateOptions: {
+          type: 'email',
+          label: 'Email',
+          options: [],
+          placeholder: 'Email'
+        },
+        className: ""
+      } ]
+      const config = {
+        name: {
+          type: 'input',
+          placeholder: 'Enter your name',
+        },
+        email: 'email',
+      }
+      const fields = service.parseFields(config)
+      expect(fields).toEqual(expected)
     }))
 })
