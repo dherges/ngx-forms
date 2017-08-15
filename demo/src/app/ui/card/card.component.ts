@@ -1,5 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
-import { CopierService } from '../../services/copier.service'
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'ui-card',
@@ -10,7 +9,8 @@ import { CopierService } from '../../services/copier.service'
           <i class="{{icon}}" aria-hidden="true"></i>
           {{title}}
         </div>
-        <button *ngIf="copy" class="btn btn-sm btn-secondary ml-auto" (click)="triggerCopy()">
+        <button *ngIf="copy" class="btn btn-sm btn-secondary ml-auto" 
+                ngxClipboard [cbContent]="copy" (cbOnSuccess)="copied = true" [class.btn-success]= "copied">
           <i class="fa fa-fw fa-clone"></i>
         </button>
       </div>
@@ -24,10 +24,5 @@ export class CardComponent {
   @Input() icon: string
   @Input() title: string
 
-  constructor(private copier: CopierService) {}
-
-  triggerCopy() {
-    this.copier.copyText(this.copy)
-  }
-
+  public copied = false
 }

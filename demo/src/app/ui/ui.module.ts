@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { CommonModule } from '@angular/common'
+import { ClipboardModule } from 'ngx-clipboard'
 
 import { BadgesComponent } from './badges/badges.component'
 import { BadgesNavComponent } from './badges/badges-nav.component'
@@ -35,7 +36,11 @@ const ui = [
 ]
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ClipboardModule,
+],
   declarations: [...ui],
   exports: [
     // CommonModule,
