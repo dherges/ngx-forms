@@ -1,15 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/style/variables';
 @import '~@ngx-plus/ngx-forms/src/scss/styles';
 @import '~animate.css';
 @import '~prismjs/themes/prism';
 @import '~font-awesome/css/font-awesome.min.css';
-@import './assets/style/variables';
 @import '~bootstrap/scss/bootstrap';
-
-$nav-height: 80px;
-$nav-brand-width: 200px;
-$nav-logo-url: './assets/img/ngx-plus-light.png';
-$nav-logo-size: 70px;
 
 .navbar {
   background: #f5f5f5;
