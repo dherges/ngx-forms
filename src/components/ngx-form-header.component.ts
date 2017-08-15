@@ -11,8 +11,8 @@ import { Component, Input } from '@angular/core'
 })
 export class NgxFormHeaderComponent {
 
-  @Input() item: any
-  @Input() title: string
-  @Input() icon: string
+  @Input() item: any = {}
+  @Input() title: string = null
+  @Input() icon: string = null
 
 }
