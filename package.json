@@ -37,7 +37,7 @@
     "build:demo": "cd demo/ && npm run build",
     "clean": "node bin/clean",
     "demo": "cd demo/ && npm start",
-    "docs": "./node_modules/.bin/compodoc -p ./tsconfig.json",
+    "docs": "./node_modules/.bin/compodoc -p ./tsconfig.json -s",
     "ghpages": "node bin/deploy-gh-pages.sh",
     "start": "npm run build",
     "test": "gulp test",
