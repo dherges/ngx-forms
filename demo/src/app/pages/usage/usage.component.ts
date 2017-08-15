@@ -90,6 +90,10 @@ export class UsageComponent {
     ],
   }
 
+  public handleAction(event) {
+    return console.log('$event', event)
+  }
+
   constructor(
     private forms: NgxFormsService,
   ) { }
