@@ -34,14 +34,15 @@
   "scripts": {
     "add": "all-contributors add",
     "build": "gulp build",
-    "build:demo": "cd demo/ && npm run build",
+    "build:demo": "cd demo && npm run build",
     "clean": "node bin/clean",
-    "demo": "cd demo/ && npm start",
+    "dev": "cd demo && npm start",
     "docs": "./node_modules/.bin/compodoc -p ./tsconfig.json -s",
-    "ghpages": "node bin/deploy-gh-pages.sh",
+    "preghpages": "cd demo && ng build --prod --progress=false --base-href https://ngx-plus.github.io/ngx-forms/",
+    "ghpages": "cd demo && npx ngh angular-cli-ghpages --no-silent --repo=git@github.com:ngx-plus/ngx-forms.git",
     "start": "npm run build",
     "test": "gulp test",
-    "update": "ncu -a && cd demo/ && ncu -a",
+    "update": "ncu -a && cd demo && ncu -a",
     "update:contributors": "all-contributors generate"
   },
   "dependencies": {
