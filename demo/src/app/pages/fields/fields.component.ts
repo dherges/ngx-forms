@@ -160,18 +160,28 @@ export class FieldsComponent {
   wysiwygDefault: 'wysiwyg',
   wysiwygOptions: {
     type: 'wysiwyg',
-    label: 'My Wysiwyg',
-    placeholder: 'My Wysiwyg',
+    label: 'Wysiwyg Basic',
+    toolbar: 'basic',
   },
-`,
+  wysiwygFull: {
+    type: 'wysiwyg',
+    label: 'Wysiwyg Full',
+    toolbar: 'full',
+  },
+}`,
       },
       formConfig: {
         fields: {
           wysiwygDefault: 'wysiwyg',
           wysiwygOptions: {
             type: 'wysiwyg',
-            label: 'My Wysiwyg',
-            placeholder: 'My Wysiwyg',
+            label: 'Wysiwyg Basic',
+            toolbar: 'basic',
+          },
+          wysiwygFull: {
+            type: 'wysiwyg',
+            label: 'Wysiwyg Full',
+            toolbar: 'full',
           },
         },
       },

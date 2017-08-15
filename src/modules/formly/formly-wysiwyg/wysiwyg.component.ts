@@ -17,6 +17,15 @@ export class FormlyFieldWysiwygComponent extends FieldType implements OnInit {
   public toolbars = {
     default: {
       toolbar: [
+        ['bold', 'italic', 'underline', 'strike'],
+        ['blockquote', 'code-block'],
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+        ['clean'],
+        ['link'],
+      ],
+    },
+    full: {
+      toolbar: [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
         ['blockquote', 'code-block'],
 

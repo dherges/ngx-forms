@@ -45,6 +45,7 @@ export class NgxFormsService {
       'label',
       'options',
       'placeholder',
+      'toolbar',
     ]
 
     // Loop over all of the above and set them if found
