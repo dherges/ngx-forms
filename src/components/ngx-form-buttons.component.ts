@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { NgxFormButton } from './ngx-form.interfaces'
 
 @Component({
   selector: 'ngx-form-buttons',
@@ -13,12 +14,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   `,
 })
 export class NgxFormButtonsComponent {
-  @Input() buttons = []
-  @Input() item = {}
-  @Input() classNames= 'btn btn-default'
-  @Output() action = new EventEmitter()
+
+  @Input() buttons: NgxFormButton[] = []
+  @Input() item: any = {}
+  @Input() classNames = 'btn btn-default'
+  @Output() action: EventEmitter<any> = new EventEmitter()
+
   click(type, payload) {
     payload = payload || this.item
     this.action.emit({ type, payload: Object.assign({}, payload) })
   }
+
 }

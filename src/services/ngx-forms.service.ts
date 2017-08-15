@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core'
+import { NgxFormFields } from '../components/index';
 
 // Humanize a string
 // From: https://stackoverflow.com/a/28339742/477550
@@ -10,12 +11,12 @@ const humanize = str => str
 @Injectable()
 export class NgxFormsService {
 
-  parseFields(fields): any[] {
+  parseFields(fields: NgxFormFields): any[] {
     return Object.keys(fields).map(fieldName => {
 
       // Get the field definition and type
       const fieldDef = fields[fieldName]
-      const fieldType = fieldDef.type || 'input'
+      const fieldType = fieldDef['type'] || 'input'
 
       // If the field definition is a string then that serves as the type and will use the inputs default options
       return (typeof fieldDef === 'string')

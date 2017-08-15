@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core
 import { FormGroup } from '@angular/forms'
 import { NgxFormsService } from '../services/ngx-forms.service'
 import { FormlyFieldConfig } from 'ng-formly'
+import { NgxFormFields } from './ngx-form.interfaces'
 
 @Component({
   selector: 'ngx-form-fields',
@@ -10,11 +11,12 @@ import { FormlyFieldConfig } from 'ng-formly'
   `,
 })
 export class NgxFormFieldsComponent implements OnChanges {
+
   @Input() form: FormGroup
   @Input() formlyFields: FormlyFieldConfig[] = []
-  @Input() fields: any
+  @Input() fields: NgxFormFields
   @Input() item: any
-  @Output() action = new EventEmitter()
+  @Output() action: EventEmitter<any> = new EventEmitter()
 
   constructor(private formsService: NgxFormsService) {}
 

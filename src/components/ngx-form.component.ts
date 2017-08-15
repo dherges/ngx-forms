@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { FormGroup } from '@angular/forms'
+import { NgxFormConfig } from './ngx-form.interfaces';
 
 @Component({
   selector: 'ngx-form',
@@ -21,17 +22,14 @@ import { FormGroup } from '@angular/forms'
   `,
 })
 export class NgxFormComponent {
+
   @Input() form: FormGroup = new FormGroup({})
-  @Input() config = {
-    icon: '',
-    title: '',
-    fields: [],
-    buttons: [],
-  }
+  @Input() config: NgxFormConfig
   @Input() item = {}
-  @Output() action = new EventEmitter()
+  @Output() action: EventEmitter<any> = new EventEmitter()
 
   handleAction($event) {
     this.action.emit($event)
   }
+
 }

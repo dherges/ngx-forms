@@ -10,3 +10,4 @@ export {
   NgxFormFieldsComponent,
   NgxFormHeaderComponent,
 }
+export * from './components/ngx-form.interfaces'
