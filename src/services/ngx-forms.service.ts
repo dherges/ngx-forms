@@ -26,8 +26,10 @@ export class NgxFormsService {
   }
 
   field(type = 'input', templateType = 'text', key: string = null, options: any = {}) {
+    const fieldType = type !== 'input' ? type : templateType
+
     // Set the default model key name
-    key = key || type
+    key = key || fieldType
 
     // Set some default values when they are not passed in
     options['label'] = options['label'] || humanize(key)
