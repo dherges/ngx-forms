@@ -8,3 +8,4 @@ debug.log
 /.vscode/
 lerna-debug.log
 documentation
+.ng_build/

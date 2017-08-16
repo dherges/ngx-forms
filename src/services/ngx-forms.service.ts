@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { NgxFormFields } from '../components/index';
+import { NgxFormFields } from '../components/ngx-form.interfaces';
 
 // Humanize a string
 // From: https://stackoverflow.com/a/28339742/477550
